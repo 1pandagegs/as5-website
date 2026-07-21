@@ -1,0 +1,10 @@
+{
+  "name": "as5-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "AS5 static site. The /api/inquire serverless function (used by Vercel) lives in api/; the standalone server/ Express app is for local dev and non-Vercel hosting.",
+  "dependencies": {
+    "resend": "^6.17.2",
+    "zod": "^4.4.3"
+  }
+}

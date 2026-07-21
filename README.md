@@ -20,10 +20,20 @@ bundler. Every page is a static file.
 - `js/contact-form.js` — client-side validation for the inquiry form, posts
   to `/api/inquire`, and pre-fills the project dropdown from a `?project=`
   query param.
-- `server/` — a minimal Express server. Static HTML/CSS/JS has no backend
-  of its own, so this is the one piece of server code in this bundle: it
-  serves every file above *and* exposes `POST /api/inquire`, since that
-  endpoint needs to validate input (Zod) and send email (Resend).
+- `api/inquire.js` — a Vercel serverless function implementing the same
+  `POST /api/inquire` logic (Zod validation + Resend). Vercel auto-detects
+  anything under `api/` with zero config, so this is what actually serves
+  the contact form in production on Vercel.
+- `server/` — a minimal standalone Express server with the *same*
+  `/api/inquire` logic, plus `express.static` to serve every file above.
+  This is for running the whole site locally or on any non-Vercel host
+  (a VPS, Netlify with a rewrite, etc.) where there's no serverless
+  functions convention to hook into.
+
+Both `api/inquire.js` and `server/server.js` implement the same
+validation/send logic independently — there's no shared module between them
+because they run under different conventions (Vercel's `(req, res)` handler
+vs. an Express route). Keep them in sync if the validation rules change.
 
 ## Running locally
 
@@ -38,15 +48,20 @@ Then open `http://localhost:4000`. Without a real `RESEND_API_KEY`, the
 `/api/inquire` endpoint still validates and logs submissions server-side —
 it just won't send a real email until a key is added.
 
-## Deploying without the server
+## Deploying
 
-Every file outside `server/` is plain static HTML/CSS/JS and can be hosted
-anywhere (Netlify, S3, GitHub Pages, etc.) with zero build step. The only
-thing that won't work without a backend is the contact form's actual send —
-either keep `server/` running somewhere reachable at `/api/inquire`, or
-point the form at a different backend (e.g. a serverless function or a
-third-party form service) and update the `fetch` call in
-`js/contact-form.js`.
+**Vercel**: push to the connected branch. The static files deploy as-is and
+`api/inquire.js` deploys automatically as a serverless function — no config
+needed. Set `RESEND_API_KEY` and `INQUIRY_RECIPIENT_EMAIL` in the Vercel
+project's Environment Variables so the function can actually send email
+(without them it validates and logs instead, same as local dev).
+
+**Anywhere else**: every file outside `api/` and `server/` is plain static
+HTML/CSS/JS and can be hosted anywhere (Netlify, S3, GitHub Pages, etc.)
+with zero build step. The only thing that won't work without a backend is
+the contact form's actual send — either run `server/` somewhere reachable
+at `/api/inquire`, or point the form at a different backend and update the
+`fetch` call in `js/contact-form.js`.
 
 ## Known gaps
 
