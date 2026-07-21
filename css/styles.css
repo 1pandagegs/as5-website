@@ -260,6 +260,38 @@ main {
   border-radius: 50% / var(--curve-height) var(--curve-height) var(--curve-height) var(--curve-height);
 }
 
+/* Logo watermark — an oversized, low-opacity logo mark used as
+   background texture on flat (non-photo) dark sections. Purely
+   decorative: absolutely positioned, non-interactive, and hidden
+   from assistive tech. */
+.has-watermark {
+  position: relative;
+  overflow: hidden;
+}
+.has-watermark > .container-frame,
+.has-watermark > .watermark-content {
+  position: relative;
+  z-index: 1;
+}
+.watermark {
+  position: absolute;
+  top: 50%;
+  right: -8%;
+  transform: translateY(-50%) rotate(-8deg);
+  height: 140%;
+  width: auto;
+  max-width: none;
+  opacity: 0.06;
+  pointer-events: none;
+  z-index: 0;
+  filter: none;
+}
+@media (min-width: 768px) {
+  .watermark {
+    height: 180%;
+  }
+}
+
 /* ---------------------------------------------------------- */
 /* Buttons                                                       */
 /* ---------------------------------------------------------- */
@@ -340,17 +372,12 @@ main {
 .navbar__logo {
   display: inline-flex;
   align-items: center;
-  gap: 10px;
-  font-family: var(--font-display);
-  font-size: 20px;
-  font-weight: 400;
-  color: var(--color-on-ink);
-  text-transform: uppercase;
 }
-.navbar__logo-mark {
-  width: 26px;
-  height: 22px;
-  flex-shrink: 0;
+.navbar__logo-img {
+  height: 26px;
+  width: auto;
+  display: block;
+  filter: none;
 }
 
 .navbar__links {

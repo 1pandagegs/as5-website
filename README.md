@@ -6,12 +6,18 @@ bundler. Every page is a static file.
 
 ## Structure
 
-- `index.html`, `philosophy/`, `capabilities/`, `portfolio/`, `contact/`,
+- `index.html`, `about/`, `services/`, `portfolio/`, `contact/`,
   `careers/`, `legal/`, `privacy/`, `404.html` — one folder per route, each
   containing an `index.html`.
-- `css/styles.css` — the full design system (tokens, type scale, layout,
-  components) as plain CSS, hand-ported from the Next.js app's Tailwind
-  setup.
+- `css/styles.css` — the full design system: a monochrome (black/white/gray,
+  no accent color) identity with a bold caps display font, matching AS5's
+  real brand.
+- `images/logo.png` (wordmark + mark, for the navbar) and
+  `images/logo-mark.png` (mark only, used as the large low-opacity
+  `.watermark` background on a few dark sections) — both are placeholders
+  rendered from the SVG mark, **replace them with the real logo files**
+  (same filenames, similar aspect ratio) and every page picks it up
+  automatically.
 - `js/main.js` — shared behavior: navbar scroll/mobile-menu state, hero
   parallax, and scroll-triggered reveal animations (`IntersectionObserver`,
   respects `prefers-reduced-motion`).
