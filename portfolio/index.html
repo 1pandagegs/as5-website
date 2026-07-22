@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Portfolio — AS5</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <title>Portfolio — AS5_GROUP</title>
   <meta name="description" content="The full AS5 portfolio of structural engineering and real estate development projects, filterable by status and type." />
   <link rel="canonical" href="https://as5.example/portfolio/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -39,17 +40,18 @@
   </header>
 
   <main>
-    <section class="container-frame flex-col gap-6" style="padding-block: 96px 0;">
-      <h1 class="text-display-xl max-w-3xl">The Architecture of Rigor.</h1>
+    <section class="container-frame flex-col gap-6 has-watermark" style="padding-block: 96px 40px;">
+      <img class="watermark" src="/images/logo-mark-black.png" alt="" aria-hidden="true" />
+      <h1 class="text-display-xl max-w-3xl">Every Development. One Standard.</h1>
       <p class="text-body-lg max-w-xl on-surface-variant">
-        TODO: Replace with client-approved narrative. Placeholder — Every
-        project below carries the same standard of tolerance, whether it is
-        a single residence or a river crossing.
+        From residential communities to civic infrastructure, every AS5
+        project carries the same commitment to purpose, quality, and
+        durability.
       </p>
     </section>
 
-    <section class="container-frame section">
-      <div class="flex-col gap-4" style="margin-bottom: 48px;">
+    <section class="container-frame section--tight">
+      <div class="flex-col gap-3" style="margin-bottom: 40px;">
         <div class="filter-group">
           <button type="button" class="filter-chip" data-filter-group="status" data-filter-value="completed">Completed</button>
           <button type="button" class="filter-chip" data-filter-group="status" data-filter-value="in-progress">In Progress</button>
@@ -68,9 +70,9 @@
       </p>
 
       <div class="portfolio-grid" data-portfolio-grid>
-        <article class="project-card is-feature" data-status="in-progress" data-type="commercial">
+        <article class="project-card" data-status="in-progress" data-type="commercial">
           <a href="/portfolio/meridian-tower/" class="project-card__media">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop" alt="Meridian Tower — a vertical spine of glass and steel engineered to bend, not break, with the wind." />
+            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" alt="Meridian Tower — a vertical spine of glass and steel engineered to bend, not break, with the wind." />
             <span class="project-card__badge text-label-caps">In Progress</span>
           </a>
           <div class="flex-col gap-2">
@@ -79,13 +81,13 @@
               <span class="text-label-caps">Commercial</span>
             </div>
             <h3 class="text-headline-md"><a href="/portfolio/meridian-tower/">Meridian Tower</a></h3>
-            <p class="text-body-md on-surface-variant">TODO: A vertical spine of glass and steel engineered to bend, not break, with the wind.</p>
+            <p class="text-body-md on-surface-variant">A vertical spine of glass and steel engineered to bend, not break, with the wind.</p>
             <a href="/portfolio/meridian-tower/" class="text-label-caps project-card__link">View Specification →</a>
           </div>
         </article>
 
         <article class="project-card" data-status="completed" data-type="residential">
-          <a href="/portfolio/aster-residences/" class="project-card__media is-portrait">
+          <a href="/portfolio/aster-residences/" class="project-card__media">
             <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop" alt="The Aster Residences — a quiet residential landmark built around a private interior garden." />
             <span class="project-card__badge text-label-caps">Completed</span>
           </a>
@@ -95,13 +97,13 @@
               <span class="text-label-caps">Residential</span>
             </div>
             <h3 class="text-headline-md"><a href="/portfolio/aster-residences/">The Aster Residences</a></h3>
-            <p class="text-body-md on-surface-variant">TODO: A quiet residential landmark built around a private interior garden.</p>
+            <p class="text-body-md on-surface-variant">A quiet residential landmark built around a private interior garden.</p>
             <a href="/portfolio/aster-residences/" class="text-label-caps project-card__link">View Specification →</a>
           </div>
         </article>
 
         <article class="project-card" data-status="concept-approved" data-type="infrastructure">
-          <a href="/portfolio/harbor-crossing-viaduct/" class="project-card__media is-portrait">
+          <a href="/portfolio/harbor-crossing-viaduct/" class="project-card__media">
             <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1200&auto=format&fit=crop" alt="Harbor Crossing Viaduct — a cable-stayed crossing engineered to move with the harbor, not against it." />
             <span class="project-card__badge text-label-caps">Concept Approved</span>
           </a>
@@ -111,14 +113,14 @@
               <span class="text-label-caps">Infrastructure</span>
             </div>
             <h3 class="text-headline-md"><a href="/portfolio/harbor-crossing-viaduct/">Harbor Crossing Viaduct</a></h3>
-            <p class="text-body-md on-surface-variant">TODO: A cable-stayed crossing engineered to move with the harbor, not against it.</p>
+            <p class="text-body-md on-surface-variant">A cable-stayed crossing engineered to move with the harbor, not against it.</p>
             <a href="/portfolio/harbor-crossing-viaduct/" class="text-label-caps project-card__link">View Specification →</a>
           </div>
         </article>
 
-        <article class="project-card is-feature" data-status="completed" data-type="cultural">
+        <article class="project-card" data-status="completed" data-type="cultural">
           <a href="/portfolio/lucerne-cultural-pavilion/" class="project-card__media">
-            <img src="https://images.unsplash.com/photo-1554435493-93422e8220c8?q=80&w=1600&auto=format&fit=crop" alt="Lucerne Cultural Pavilion — a single cantilevered roof plane unifying three galleries around an open civic court." />
+            <img src="https://images.unsplash.com/photo-1554435493-93422e8220c8?q=80&w=1200&auto=format&fit=crop" alt="Lucerne Cultural Pavilion — a single cantilevered roof plane unifying three galleries around an open civic court." />
             <span class="project-card__badge text-label-caps">Completed</span>
           </a>
           <div class="flex-col gap-2">
@@ -127,13 +129,13 @@
               <span class="text-label-caps">Cultural</span>
             </div>
             <h3 class="text-headline-md"><a href="/portfolio/lucerne-cultural-pavilion/">Lucerne Cultural Pavilion</a></h3>
-            <p class="text-body-md on-surface-variant">TODO: A single cantilevered roof plane unifying three galleries around an open civic court.</p>
+            <p class="text-body-md on-surface-variant">A single cantilevered roof plane unifying three galleries around an open civic court.</p>
             <a href="/portfolio/lucerne-cultural-pavilion/" class="text-label-caps project-card__link">View Specification →</a>
           </div>
         </article>
 
         <article class="project-card" data-status="in-progress" data-type="residential">
-          <a href="/portfolio/copper-quarter-residences/" class="project-card__media is-portrait">
+          <a href="/portfolio/copper-quarter-residences/" class="project-card__media">
             <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop" alt="Copper Quarter Residences — a low-rise residential quarter organized around shared courtyards instead of a single tower." />
             <span class="project-card__badge text-label-caps">In Progress</span>
           </a>
@@ -143,16 +145,16 @@
               <span class="text-label-caps">Residential</span>
             </div>
             <h3 class="text-headline-md"><a href="/portfolio/copper-quarter-residences/">Copper Quarter Residences</a></h3>
-            <p class="text-body-md on-surface-variant">TODO: A low-rise residential quarter organized around shared courtyards instead of a single tower.</p>
+            <p class="text-body-md on-surface-variant">A low-rise residential quarter organized around shared courtyards instead of a single tower.</p>
             <a href="/portfolio/copper-quarter-residences/" class="text-label-caps project-card__link">View Specification →</a>
           </div>
         </article>
       </div>
     </section>
 
-    <section class="container-frame section">
+    <section class="container-frame section--tight">
       <div class="reveal flex-col gap-8" style="align-items: flex-start;">
-        <h2 class="text-headline-lg max-w-2xl">Register your interest in what comes next.</h2>
+        <h2 class="text-headline-lg max-w-2xl">Ready to Build What's Next?</h2>
         <a href="/contact/" class="btn btn--primary">Inquire</a>
       </div>
     </section>
@@ -160,49 +162,15 @@
 
   <footer class="footer">
     <div class="container-frame footer__inner">
+      <img src="/images/logo.png" alt="AS5" class="footer__logo" />
       <div class="footer__columns">
-        <div class="flex-col gap-6" data-inquiry-widget>
-          <div class="flex-col gap-2">
-            <span class="text-headline-md" style="font-family: var(--font-display);">Get In Touch</span>
-            <p class="text-body-md" style="opacity: 0.75;">
-              Ready to build with AS5? Reach out to start the conversation.
-            </p>
-          </div>
-          <form class="form" data-inquiry-form novalidate>
-            <div class="field">
-              <label for="footer-name">Name</label>
-              <input id="footer-name" name="name" type="text" placeholder="Name" />
-              <p class="text-body-md field__error" data-error-for="name" hidden></p>
-            </div>
-            <div class="field">
-              <label for="footer-email">Email</label>
-              <input id="footer-email" name="email" type="email" placeholder="Email" />
-              <p class="text-body-md field__error" data-error-for="email" hidden></p>
-            </div>
-            <div class="field">
-              <label for="footer-phone">Phone</label>
-              <input id="footer-phone" name="phone" type="tel" placeholder="Phone" />
-            </div>
-            <div class="field">
-              <label for="footer-message">Message</label>
-              <textarea id="footer-message" name="message" rows="3" placeholder="Type a message..."></textarea>
-              <p class="text-body-md field__error" data-error-for="message" hidden></p>
-            </div>
-            <p class="text-body-md form__server-message" data-server-message hidden></p>
-            <button type="submit" class="btn btn--primary w-fit">Submit</button>
-          </form>
-          <div class="form__success" data-success hidden>
-            <p class="text-body-md">Thank you — your message has been received.</p>
-          </div>
-        </div>
-
         <div class="footer__group">
           <span class="text-label-caps">Call Us</span>
           <p class="text-body-md">+234 704 237 7442</p>
           <span class="text-label-caps mt-12">Write Us</span>
           <p class="text-body-md">as5entltd@gmail.com</p>
           <span class="text-label-caps mt-12">Visit Us</span>
-          <p class="text-body-md">TODO: Street Address, City, Postal Code, Country</p>
+          <p class="text-body-md">Nigeria</p>
         </div>
 
         <div class="footer__group">
@@ -213,9 +181,6 @@
             <a href="/services/" class="footer__link text-body-md">Services</a>
             <a href="/portfolio/" class="footer__link text-body-md">Portfolio</a>
             <a href="/contact/" class="footer__link text-body-md">Contact</a>
-            <a href="/careers/" class="footer__link text-body-md">Careers</a>
-            <a href="/legal/" class="footer__link text-body-md">Legal</a>
-            <a href="/privacy/" class="footer__link text-body-md">Privacy</a>
           </nav>
         </div>
       </div>
@@ -233,7 +198,6 @@
       </div>
     </div>
   </footer>
-
   <script src="/js/main.js" defer></script>
   <script src="/js/contact-form.js" defer></script>
   <script src="/js/portfolio-filter.js" defer></script>

@@ -213,6 +213,15 @@ button {
   }
 }
 
+.section--tight {
+  padding-block: 40px;
+}
+@media (min-width: 768px) {
+  .section--tight {
+    padding-block: 56px;
+  }
+}
+
 .hairline {
   border: none;
   border-top: 1px solid var(--color-outline-variant);
@@ -374,9 +383,19 @@ main {
   align-items: center;
 }
 .navbar__logo-img {
-  height: 26px;
+  height: 38px;
   width: auto;
   display: block;
+  filter: none;
+}
+
+/* Inline brand-mark swap: used where "AS5" appears as a standalone
+   word inside a headline, sized to sit on the text baseline. */
+.inline-logo {
+  height: 0.8em;
+  width: auto;
+  display: inline-block;
+  vertical-align: -0.05em;
   filter: none;
 }
 
@@ -488,14 +507,22 @@ main {
   gap: 56px;
   padding-block: 72px;
 }
+.footer__logo {
+  height: 44px;
+  width: auto;
+  display: block;
+  filter: none;
+  margin-bottom: 8px;
+  align-self: flex-start;
+}
 .footer__columns {
   display: grid;
   gap: 48px;
   grid-template-columns: 1fr;
 }
-@media (min-width: 900px) {
+@media (min-width: 640px) {
   .footer__columns {
-    grid-template-columns: 1.2fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 64px;
   }
 }
@@ -620,27 +647,18 @@ main {
   max-width: 820px;
 }
 .hero__search {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
-  width: 100%;
-  max-width: 560px;
-  padding: 8px 8px 8px 24px;
+  justify-content: center;
+  gap: 24px;
+  padding: 12px 12px 12px 32px;
   border-radius: var(--radius-pill);
   background: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.35);
   backdrop-filter: blur(4px);
 }
-.hero__search input {
-  flex: 1;
-  background: transparent;
-  border: none;
-  color: var(--color-on-ink);
-  font: inherit;
-  font-size: 15px;
-}
-.hero__search input::placeholder {
-  color: rgba(255, 255, 255, 0.75);
+.hero__search span:first-of-type {
+  text-align: center;
 }
 .hero__search button {
   display: flex;
@@ -879,18 +897,24 @@ main {
   white-space: nowrap;
 }
 
-/* Asymmetric portfolio grid: every 3rd tile is a feature tile */
+/* Portfolio grid: a clean, consistent grid — no oversized feature
+   tiles, so it reads as one scannable set rather than a bulky
+   stack of full-bleed banners. */
 .portfolio-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: 32px;
 }
 @media (min-width: 640px) {
   .portfolio-grid {
     grid-template-columns: repeat(2, 1fr);
+    gap: 36px;
   }
-  .portfolio-grid > .is-feature {
-    grid-column: span 2;
+}
+@media (min-width: 1024px) {
+  .portfolio-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
   }
 }
 .portfolio-grid > * {

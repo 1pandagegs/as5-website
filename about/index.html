@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About — AS5</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <title>About — AS5_GROUP</title>
   <meta name="description" content="AS5 is a real estate development and construction firm — where vision becomes landmark." />
   <link rel="canonical" href="https://as5.example/about/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -63,11 +64,12 @@
       </div>
     </section>
 
-    <section class="surface-alt section">
+    <section class="surface-alt section has-watermark">
+      <img class="watermark" src="/images/logo-mark-black.png" alt="" aria-hidden="true" />
       <div class="container-frame flex-col gap-8">
         <div class="reveal flex-col gap-4 max-w-2xl">
           <span class="text-label-caps on-surface-variant">Why AS5</span>
-          <h2 class="text-headline-lg">Why AS5 Is Different.</h2>
+          <h2 class="text-headline-lg">Why <img src="/images/logo-black.png" alt="AS5" class="inline-logo" /> Is Different.</h2>
         </div>
         <ul class="service-list">
           <li class="reveal service-list__item">
@@ -121,10 +123,11 @@
     <section class="container-frame section flex-col gap-8">
       <div class="reveal flex-col gap-4 max-w-2xl">
         <span class="text-label-caps on-surface-variant">Leadership</span>
-        <h2 class="text-headline-lg">The Team Behind AS5.</h2>
+        <h2 class="text-headline-lg">The Team Behind <img src="/images/logo-black.png" alt="AS5" class="inline-logo" />.</h2>
         <p class="text-body-lg on-surface-variant">
-          TODO: Replace with a client-approved introduction to the AS5
-          leadership team.
+          AS5 is led by a team that treats every commitment as personal —
+          precise in execution, transparent in process, and accountable
+          for the outcome.
         </p>
       </div>
       <div class="team-grid">
@@ -132,29 +135,29 @@
           <div class="team-card__photo">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-9 2.2-9 5v3h18v-3c0-2.8-4.6-5-9-5Z"/></svg>
           </div>
-          <span class="text-headline-md" style="font-size: 17px;">TODO: CEO Name</span>
+          <span class="text-headline-md" style="font-size: 17px;">Name Pending</span>
           <span class="text-label-caps on-surface-variant">Chief Executive Officer</span>
         </div>
         <div class="reveal team-card">
           <div class="team-card__photo">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-9 2.2-9 5v3h18v-3c0-2.8-4.6-5-9-5Z"/></svg>
           </div>
-          <span class="text-headline-md" style="font-size: 17px;">TODO: Name</span>
-          <span class="text-label-caps on-surface-variant">TODO: Title</span>
+          <span class="text-headline-md" style="font-size: 17px;">Name Pending</span>
+          <span class="text-label-caps on-surface-variant">Title Pending</span>
         </div>
         <div class="reveal team-card">
           <div class="team-card__photo">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-9 2.2-9 5v3h18v-3c0-2.8-4.6-5-9-5Z"/></svg>
           </div>
-          <span class="text-headline-md" style="font-size: 17px;">TODO: Name</span>
-          <span class="text-label-caps on-surface-variant">TODO: Title</span>
+          <span class="text-headline-md" style="font-size: 17px;">Name Pending</span>
+          <span class="text-label-caps on-surface-variant">Title Pending</span>
         </div>
         <div class="reveal team-card">
           <div class="team-card__photo">
             <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 12a5 5 0 1 0 0-10 5 5 0 0 0 0 10Zm0 2c-4.4 0-9 2.2-9 5v3h18v-3c0-2.8-4.6-5-9-5Z"/></svg>
           </div>
-          <span class="text-headline-md" style="font-size: 17px;">TODO: Name</span>
-          <span class="text-label-caps on-surface-variant">TODO: Title</span>
+          <span class="text-headline-md" style="font-size: 17px;">Name Pending</span>
+          <span class="text-label-caps on-surface-variant">Title Pending</span>
         </div>
       </div>
     </section>
@@ -169,49 +172,15 @@
 
   <footer class="footer">
     <div class="container-frame footer__inner">
+      <img src="/images/logo.png" alt="AS5" class="footer__logo" />
       <div class="footer__columns">
-        <div class="flex-col gap-6" data-inquiry-widget>
-          <div class="flex-col gap-2">
-            <span class="text-headline-md" style="font-family: var(--font-display);">Get In Touch</span>
-            <p class="text-body-md" style="opacity: 0.75;">
-              Ready to build with AS5? Reach out to start the conversation.
-            </p>
-          </div>
-          <form class="form" data-inquiry-form novalidate>
-            <div class="field">
-              <label for="footer-name">Name</label>
-              <input id="footer-name" name="name" type="text" placeholder="Name" />
-              <p class="text-body-md field__error" data-error-for="name" hidden></p>
-            </div>
-            <div class="field">
-              <label for="footer-email">Email</label>
-              <input id="footer-email" name="email" type="email" placeholder="Email" />
-              <p class="text-body-md field__error" data-error-for="email" hidden></p>
-            </div>
-            <div class="field">
-              <label for="footer-phone">Phone</label>
-              <input id="footer-phone" name="phone" type="tel" placeholder="Phone" />
-            </div>
-            <div class="field">
-              <label for="footer-message">Message</label>
-              <textarea id="footer-message" name="message" rows="3" placeholder="Type a message..."></textarea>
-              <p class="text-body-md field__error" data-error-for="message" hidden></p>
-            </div>
-            <p class="text-body-md form__server-message" data-server-message hidden></p>
-            <button type="submit" class="btn btn--primary w-fit">Submit</button>
-          </form>
-          <div class="form__success" data-success hidden>
-            <p class="text-body-md">Thank you — your message has been received.</p>
-          </div>
-        </div>
-
         <div class="footer__group">
           <span class="text-label-caps">Call Us</span>
           <p class="text-body-md">+234 704 237 7442</p>
           <span class="text-label-caps mt-12">Write Us</span>
           <p class="text-body-md">as5entltd@gmail.com</p>
           <span class="text-label-caps mt-12">Visit Us</span>
-          <p class="text-body-md">TODO: Street Address, City, Postal Code, Country</p>
+          <p class="text-body-md">Nigeria</p>
         </div>
 
         <div class="footer__group">
@@ -222,9 +191,6 @@
             <a href="/services/" class="footer__link text-body-md">Services</a>
             <a href="/portfolio/" class="footer__link text-body-md">Portfolio</a>
             <a href="/contact/" class="footer__link text-body-md">Contact</a>
-            <a href="/careers/" class="footer__link text-body-md">Careers</a>
-            <a href="/legal/" class="footer__link text-body-md">Legal</a>
-            <a href="/privacy/" class="footer__link text-body-md">Privacy</a>
           </nav>
         </div>
       </div>
@@ -242,7 +208,6 @@
       </div>
     </div>
   </footer>
-
   <script src="/js/main.js" defer></script>
   <script src="/js/contact-form.js" defer></script>
 </body>

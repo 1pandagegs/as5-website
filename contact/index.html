@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — AS5</title>
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <title>Contact — AS5_GROUP</title>
   <meta name="description" content="Begin a conversation with AS5 about a project, a consultation, or a partnership." />
   <link rel="canonical" href="https://as5.example/contact/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -43,8 +44,7 @@
       <div class="flex-col gap-8">
         <h1 class="text-display-xl">Begin the Conversation.</h1>
         <p class="text-body-lg max-w-md on-surface-variant">
-          TODO: Replace with client-approved narrative. Placeholder — Every
-          inquiry reaches a lead engineer directly, not a queue.
+          Every inquiry reaches our team directly — not a queue.
         </p>
 
         <form class="form" data-inquiry-form novalidate>
@@ -99,13 +99,13 @@
 
       <div class="flex-col gap-8" style="justify-self: start;">
         <div class="flex-col gap-2">
-          <span class="text-label-caps on-surface-variant">TODO: Headquarters City</span>
-          <p class="text-body-md on-surface-variant">TODO: Street Address, City, Postal Code, Country</p>
+          <span class="text-label-caps on-surface-variant">Our Office</span>
+          <p class="text-body-md on-surface-variant">Nigeria</p>
           <p class="text-body-md on-surface-variant">as5entltd@gmail.com · +234 704 237 7442</p>
         </div>
 
         <div style="display: flex; aspect-ratio: 4 / 3; width: 100%; align-items: center; justify-content: center; border: 1px solid var(--color-outline-variant); background: var(--color-surface-alt);">
-          <span class="text-label-caps on-surface-variant">TODO: Map embed</span>
+          <span class="text-label-caps on-surface-variant">Map Coming Soon</span>
         </div>
 
         <hr class="hairline" />
@@ -117,49 +117,15 @@
 
   <footer class="footer">
     <div class="container-frame footer__inner">
+      <img src="/images/logo.png" alt="AS5" class="footer__logo" />
       <div class="footer__columns">
-        <div class="flex-col gap-6" data-inquiry-widget>
-          <div class="flex-col gap-2">
-            <span class="text-headline-md" style="font-family: var(--font-display);">Get In Touch</span>
-            <p class="text-body-md" style="opacity: 0.75;">
-              Ready to build with AS5? Reach out to start the conversation.
-            </p>
-          </div>
-          <form class="form" data-inquiry-form novalidate>
-            <div class="field">
-              <label for="footer-name">Name</label>
-              <input id="footer-name" name="name" type="text" placeholder="Name" />
-              <p class="text-body-md field__error" data-error-for="name" hidden></p>
-            </div>
-            <div class="field">
-              <label for="footer-email">Email</label>
-              <input id="footer-email" name="email" type="email" placeholder="Email" />
-              <p class="text-body-md field__error" data-error-for="email" hidden></p>
-            </div>
-            <div class="field">
-              <label for="footer-phone">Phone</label>
-              <input id="footer-phone" name="phone" type="tel" placeholder="Phone" />
-            </div>
-            <div class="field">
-              <label for="footer-message">Message</label>
-              <textarea id="footer-message" name="message" rows="3" placeholder="Type a message..."></textarea>
-              <p class="text-body-md field__error" data-error-for="message" hidden></p>
-            </div>
-            <p class="text-body-md form__server-message" data-server-message hidden></p>
-            <button type="submit" class="btn btn--primary w-fit">Submit</button>
-          </form>
-          <div class="form__success" data-success hidden>
-            <p class="text-body-md">Thank you — your message has been received.</p>
-          </div>
-        </div>
-
         <div class="footer__group">
           <span class="text-label-caps">Call Us</span>
           <p class="text-body-md">+234 704 237 7442</p>
           <span class="text-label-caps mt-12">Write Us</span>
           <p class="text-body-md">as5entltd@gmail.com</p>
           <span class="text-label-caps mt-12">Visit Us</span>
-          <p class="text-body-md">TODO: Street Address, City, Postal Code, Country</p>
+          <p class="text-body-md">Nigeria</p>
         </div>
 
         <div class="footer__group">
@@ -170,9 +136,6 @@
             <a href="/services/" class="footer__link text-body-md">Services</a>
             <a href="/portfolio/" class="footer__link text-body-md">Portfolio</a>
             <a href="/contact/" class="footer__link text-body-md">Contact</a>
-            <a href="/careers/" class="footer__link text-body-md">Careers</a>
-            <a href="/legal/" class="footer__link text-body-md">Legal</a>
-            <a href="/privacy/" class="footer__link text-body-md">Privacy</a>
           </nav>
         </div>
       </div>
@@ -190,7 +153,6 @@
       </div>
     </div>
   </footer>
-
   <script src="/js/main.js" defer></script>
   <script src="/js/contact-form.js" defer></script>
 </body>
