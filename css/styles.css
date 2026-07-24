@@ -57,7 +57,10 @@ body {
   margin: 0;
   display: flex;
   flex-direction: column;
-  background: var(--color-surface);
+  background-color: var(--color-surface);
+  background-image: url("/images/pattern-tile.png");
+  background-repeat: repeat;
+  background-size: 340px 340px;
   color: var(--color-on-surface);
   font-family: var(--font-body);
   -webkit-font-smoothing: antialiased;
@@ -243,7 +246,7 @@ main {
 /* ---------------------------------------------------------- */
 
 .surface-alt {
-  background: var(--color-surface-alt);
+  background: rgba(244, 244, 245, 0.92);
 }
 .surface-ink {
   background: var(--color-ink);
@@ -267,37 +270,6 @@ main {
 }
 .curve-both {
   border-radius: 50% / var(--curve-height) var(--curve-height) var(--curve-height) var(--curve-height);
-}
-
-/* Logo watermark — an oversized, low-opacity logo mark used as
-   background texture on flat (non-photo) dark sections. Purely
-   decorative: absolutely positioned, non-interactive, and hidden
-   from assistive tech. */
-.has-watermark {
-  position: relative;
-  overflow: hidden;
-}
-.has-watermark > :not(.watermark) {
-  position: relative;
-  z-index: 1;
-}
-.watermark {
-  position: absolute;
-  top: 50%;
-  right: -8%;
-  transform: translateY(-50%) rotate(-8deg);
-  height: 140%;
-  width: auto;
-  max-width: none;
-  opacity: 0.06;
-  pointer-events: none;
-  z-index: 0;
-  filter: none;
-}
-@media (min-width: 768px) {
-  .watermark {
-    height: 180%;
-  }
 }
 
 /* ---------------------------------------------------------- */
