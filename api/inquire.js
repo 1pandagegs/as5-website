@@ -5,7 +5,10 @@ const inquirySchema = z.object({
   name: z.string().min(2, "Please enter your full name."),
   email: z.email("Please enter a valid email address."),
   phone: z.string().optional(),
+  company: z.string().optional(),
+  inquiryType: z.string().optional(),
   project: z.string().optional(),
+  timeline: z.string().optional(),
   message: z.string().min(10, "Please tell us a bit more about your inquiry."),
 });
 
@@ -24,13 +27,13 @@ module.exports = async (req, res) => {
     return;
   }
 
-  const { name, email, phone, project, message } = parsed.data;
+  const { name, email, phone, company, inquiryType, project, timeline, message } = parsed.data;
   const apiKey = process.env.RESEND_API_KEY;
 
   if (!apiKey || apiKey.startsWith("TODO")) {
     console.warn(
       "RESEND_API_KEY is not configured — inquiry logged instead of sent.",
-      { name, email, phone, project, message }
+      { name, email, phone, company, inquiryType, project, timeline, message }
     );
     res.status(200).json({ success: true, delivered: false });
     return;
@@ -46,7 +49,10 @@ module.exports = async (req, res) => {
       `Name: ${name}`,
       `Email: ${email}`,
       phone ? `Phone: ${phone}` : undefined,
+      company ? `Company: ${company}` : undefined,
+      inquiryType ? `Inquiry type: ${inquiryType}` : undefined,
       project ? `Project of interest: ${project}` : undefined,
+      timeline ? `Estimated timeline: ${timeline}` : undefined,
       "",
       message,
     ]

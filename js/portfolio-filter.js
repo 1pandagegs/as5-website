@@ -16,7 +16,7 @@
     var params = new URLSearchParams(window.location.search);
     return {
       status: params.get("status") || "",
-      type: params.get("type") || "",
+      category: params.get("category") || "",
     };
   }
 
@@ -40,9 +40,9 @@
     items.forEach(function (item) {
       var matchesStatus =
         !filters.status || item.getAttribute("data-status") === filters.status;
-      var matchesType =
-        !filters.type || item.getAttribute("data-type") === filters.type;
-      var visible = matchesStatus && matchesType;
+      var matchesCategory =
+        !filters.category || item.getAttribute("data-category") === filters.category;
+      var visible = matchesStatus && matchesCategory;
       if (visible) visibleCount += 1;
       setItemVisible(item, visible);
     });
@@ -61,7 +61,7 @@
   function updateUrl(filters) {
     var params = new URLSearchParams();
     if (filters.status) params.set("status", filters.status);
-    if (filters.type) params.set("type", filters.type);
+    if (filters.category) params.set("category", filters.category);
     var query = params.toString();
     var newUrl = window.location.pathname + (query ? "?" + query : "");
     window.history.replaceState(null, "", newUrl);

@@ -15,6 +15,16 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/styles.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "AS5",
+    "url": "https://as5.example/",
+    "logo": "https://as5.example/images/logo-black.png",
+    "sameAs": []
+  }
+  </script>
 </head>
 <body>
   <header class="navbar" data-navbar>
@@ -24,6 +34,7 @@
         <a href="/about/" class="navbar__link text-label-caps">About</a>
         <a href="/services/" class="navbar__link text-label-caps">Services</a>
         <a href="/portfolio/" class="navbar__link text-label-caps">Portfolio</a>
+        <a href="/insights/" class="navbar__link text-label-caps">Insights</a>
         <a href="/contact/" class="navbar__link text-label-caps">Contact</a>
       </nav>
       <a href="/contact/" class="btn btn--primary navbar__cta">Inquire</a>
@@ -37,6 +48,7 @@
         <a href="/about/" class="text-label-caps">About</a>
         <a href="/services/" class="text-label-caps">Services</a>
         <a href="/portfolio/" class="text-label-caps">Portfolio</a>
+        <a href="/insights/" class="text-label-caps">Insights</a>
         <a href="/contact/" class="text-label-caps">Contact</a>
         <a href="/contact/" class="btn btn--primary">Inquire</a>
       </div>
@@ -54,13 +66,11 @@
       <div class="hero__scrim"></div>
       <div class="container-frame hero__content">
         <h1 class="text-display-xl">Where Vision Becomes Landmark.</h1>
-        <p class="text-body-lg">Beyond building. Creating landmarks.</p>
-        <a href="/portfolio/" class="hero__search">
-          <span>Explore Our Portfolio</span>
-          <span aria-hidden="true">
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
-          </span>
-        </a>
+        <p class="text-body-lg">We plan, develop, and deliver projects built for lasting impact.</p>
+        <div class="grid-2" style="grid-template-columns: 1fr 1fr; gap: 16px;">
+          <a href="/portfolio/" class="btn btn--primary">Explore Our Work</a>
+          <a href="/about/" class="btn btn--outline-light">Discover AS5</a>
+        </div>
       </div>
       <div class="hero__scroll-cue text-label-caps">Scroll</div>
     </section>
@@ -75,117 +85,105 @@
       </div>
       <div class="reveal flex-col gap-8">
         <div class="flex-col gap-4">
-          <span class="text-label-caps on-surface-variant">About Us</span>
+          <span class="text-label-caps on-surface-variant">About AS5</span>
           <h2 class="text-headline-lg">Beyond Building. Creating Landmarks.</h2>
         </div>
         <p class="text-body-lg on-surface-variant">
-          At AS5, construction is only one part of the work. We plan,
-          coordinate, supervise, and execute developments with a long-term
-          vision in mind — from land preparation to final delivery, every
-          project is guided by structured oversight, transparency, and
-          quality control.
+          AS5 is a development and construction company focused on
+          transforming carefully planned ideas into enduring projects. Our
+          work brings together strategy, design coordination, project
+          management, construction oversight, and long-term value creation.
+          We approach every development with clarity, discipline, and a
+          commitment to quality at every stage.
         </p>
         <a href="/about/" class="text-label-caps w-fit" style="text-decoration: underline;">
-          Learn More →
+          Learn About AS5 →
         </a>
 
-        <div class="stat-grid mt-12">
-          <div class="stat-grid__item">
-            <span class="text-stat">5+</span>
-            <span class="text-label-caps on-surface-variant">Active Developments</span>
-          </div>
-          <div class="stat-grid__item">
-            <span class="text-stat">3</span>
-            <span class="text-label-caps on-surface-variant">Core Disciplines</span>
-          </div>
-        </div>
+        <div class="stat-grid is-four mt-12" data-stat-grid></div>
 
         <div class="grid-2" style="grid-template-columns: 1fr 1fr; gap: 16px;">
-          <a href="/contact/" class="btn btn--primary">Talk To Us</a>
+          <a href="/about/" class="btn btn--primary">Learn About AS5</a>
           <a href="/portfolio/" class="btn btn--secondary">View Portfolio</a>
         </div>
       </div>
     </section>
 
     <section class="surface-ink curve-top curve-bottom" style="margin-block: 24px;">
-      <div class="container-frame section grid-2" style="padding-block: 64px;">
-        <h2 class="text-headline-lg">Built to Last.<br />Not Just to Stand.</h2>
-        <p class="text-body-lg on-surface-variant">
-          Durability is not an afterthought at AS5 — it's the foundation of
-          every decision we make. From material selection to on-site
-          supervision, every stage is guided by structure, precision, and
-          long-term thinking. Because what we build is meant to endure.
-        </p>
+      <div class="container-frame section">
+        <div class="grid-2" style="margin-bottom: 48px;">
+          <h2 class="text-headline-lg">Built to Last.<br />Not Just to Stand.</h2>
+          <p class="text-body-lg on-surface-variant">
+            Durability is not an afterthought at AS5 — it's the foundation of
+            every decision we make. From material selection to on-site
+            supervision, every stage is guided by structure, precision, and
+            long-term thinking. Because what we build is meant to endure.
+          </p>
+        </div>
+
+        <hr class="hairline" style="margin-bottom: 40px; border-top-color: rgba(255,255,255,0.16);" />
+
+        <div class="principle-grid">
+          <div class="principle-item">
+            <span class="text-label-caps principle-item__number">01</span>
+            <svg class="principle-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-8h6v8"/></svg>
+            <div class="flex-col gap-1">
+              <span class="text-headline-md" style="font-size: 18px;">Purpose</span>
+              <span class="text-body-md on-surface-variant">Not excess.</span>
+            </div>
+          </div>
+          <div class="principle-item">
+            <span class="text-label-caps principle-item__number">02</span>
+            <svg class="principle-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4Z"/></svg>
+            <div class="flex-col gap-1">
+              <span class="text-headline-md" style="font-size: 18px;">Quality</span>
+              <span class="text-body-md on-surface-variant">Not compromise.</span>
+            </div>
+          </div>
+          <div class="principle-item">
+            <span class="text-label-caps principle-item__number">03</span>
+            <svg class="principle-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.4 8 11 4.6-2.6 8-6 8-11V5l-8-3Z"/></svg>
+            <div class="flex-col gap-1">
+              <span class="text-headline-md" style="font-size: 18px;">Safety</span>
+              <span class="text-body-md on-surface-variant">Not optional.</span>
+            </div>
+          </div>
+          <div class="principle-item">
+            <span class="text-label-caps principle-item__number">04</span>
+            <svg class="principle-item__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+            <div class="flex-col gap-1">
+              <span class="text-headline-md" style="font-size: 18px;">Integrity</span>
+              <span class="text-body-md on-surface-variant">Not negotiable.</span>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
     <section class="container-frame section">
       <div class="reveal grid-2" style="margin-bottom: 56px;">
         <div class="flex-col gap-4">
-          <span class="text-label-caps on-surface-variant">Our Portfolio</span>
-          <h2 class="text-headline-lg">Structures, Not<br />Just Buildings</h2>
+          <span class="text-label-caps on-surface-variant">Featured Projects</span>
+          <h2 class="text-headline-lg">Landmark by<br />Landmark.</h2>
         </div>
         <div class="flex-col gap-4">
           <p class="text-body-lg on-surface-variant">
-            Every AS5 development is planned around how people actually
-            live and work — efficient layouts, refined materials, and
-            construction built to outlast trends.
+            Every AS5 project reflects a clear response to place, purpose,
+            and long-term value.
           </p>
           <a href="/portfolio/" class="text-label-caps w-fit" style="text-decoration: underline;">Learn More →</a>
         </div>
       </div>
 
-      <div class="flex-col gap-6">
-        <a href="/portfolio/meridian-tower/" class="banner-card reveal">
-          <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1600&auto=format&fit=crop" alt="Meridian Tower — a vertical spine of glass and steel engineered to bend, not break, with the wind." />
-          <div class="banner-card__scrim"></div>
-          <div class="banner-card__content">
-            <div class="flex-col gap-2">
-              <h3 class="text-headline-md">Meridian Tower</h3>
-              <span class="banner-card__location text-body-md">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
-                Nigeria
-              </span>
-            </div>
-            <span class="banner-card__link text-label-caps">View Project
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <a href="/portfolio/aster-residences/" class="banner-card reveal">
-          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1600&auto=format&fit=crop" alt="The Aster Residences — a quiet residential landmark built around a private interior garden." />
-          <div class="banner-card__scrim"></div>
-          <div class="banner-card__content">
-            <div class="flex-col gap-2">
-              <h3 class="text-headline-md">The Aster Residences</h3>
-              <span class="banner-card__location text-body-md">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
-                Nigeria
-              </span>
-            </div>
-            <span class="banner-card__link text-label-caps">View Project
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
-            </span>
-          </div>
-        </a>
-
-        <a href="/portfolio/harbor-crossing-viaduct/" class="banner-card reveal">
-          <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1600&auto=format&fit=crop" alt="Harbor Crossing Viaduct — a cable-stayed crossing engineered to move with the harbor, not against it." />
-          <div class="banner-card__scrim"></div>
-          <div class="banner-card__content">
-            <div class="flex-col gap-2">
-              <h3 class="text-headline-md">Harbor Crossing Viaduct</h3>
-              <span class="banner-card__location text-body-md">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5.25 7 13 7 13s7-7.75 7-13a7 7 0 0 0-7-7Zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5Z"/></svg>
-                Nigeria
-              </span>
-            </div>
-            <span class="banner-card__link text-label-caps">View Project
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="m9 6 6 6-6 6"/></svg>
-            </span>
-          </div>
-        </a>
+      <div class="carousel reveal" data-carousel>
+        <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="Previous">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 6-6 6 6 6"/></svg>
+        </button>
+        <div class="carousel__track" data-featured-projects="meridian-tower,aster-residences,harbor-crossing-viaduct,copper-quarter-residences" style="gap: 24px;"></div>
+        <button type="button" class="carousel__arrow carousel__arrow--next" aria-label="Next">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg>
+        </button>
+        <div class="carousel__dots"></div>
       </div>
 
       <a href="/portfolio/" class="text-label-caps w-fit mt-12" style="text-decoration: underline; display: inline-block;">See all projects →</a>
@@ -207,7 +205,7 @@
             </li>
             <li class="service-list__item">
               <svg class="service-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m3 21 9-4 9 4V8l-9-4-9 4Z"/><path d="M12 4v17"/></svg>
-              <span class="text-headline-md" style="font-size: 18px;">Structural Engineering</span>
+              <span class="text-headline-md" style="font-size: 18px;">Construction</span>
             </li>
           </ul>
         </div>
@@ -220,80 +218,81 @@
         </div>
       </div>
       <div class="container-frame">
-        <a href="/services/" class="text-label-caps w-fit mt-12" style="text-decoration: underline; display: inline-block;">See Our Services →</a>
+        <a href="/services/" class="text-label-caps w-fit mt-12" style="text-decoration: underline; display: inline-block;">Explore Our Process →</a>
+      </div>
+    </section>
+
+    <section class="container-frame section">
+      <div class="reveal flex-col gap-4" style="margin-bottom: 40px; align-items: center; text-align: center;">
+        <span class="text-label-caps on-surface-variant">Why AS5</span>
+        <h2 class="text-headline-lg">Discipline at Every Stage.</h2>
+      </div>
+      <ul class="service-list reveal max-w-2xl" style="margin-inline: auto;">
+        <li class="service-list__item">
+          <svg class="service-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-8h6v8"/></svg>
+          <span class="text-body-lg">Architecture driven by purpose, not excess.</span>
+        </li>
+        <li class="service-list__item">
+          <svg class="service-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M14 7h7v7"/></svg>
+          <span class="text-body-lg">Decisions guided by long-term value.</span>
+        </li>
+        <li class="service-list__item">
+          <svg class="service-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg>
+          <span class="text-body-lg">Efficient layouts that prioritize comfort and function.</span>
+        </li>
+        <li class="service-list__item">
+          <svg class="service-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12 2 2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4Z"/></svg>
+          <span class="text-body-lg">Materials selected for durability and refined detail.</span>
+        </li>
+        <li class="service-list__item">
+          <svg class="service-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.4 8 11 4.6-2.6 8-6 8-11V5l-8-3Z"/></svg>
+          <span class="text-body-lg">Construction standards built around quality and safety.</span>
+        </li>
+        <li class="service-list__item">
+          <svg class="service-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="9"/></svg>
+          <span class="text-body-lg">Transparent project oversight from start to finish.</span>
+        </li>
+      </ul>
+      <div class="reveal" style="text-align: center; margin-top: 40px;">
+        <a href="/services/" class="btn btn--secondary">How We Work</a>
+      </div>
+    </section>
+
+    <section class="surface-alt section--tight">
+      <div class="container-frame flex-col gap-8">
+        <div class="reveal flex-col gap-4 text-center">
+          <span class="text-label-caps on-surface-variant">Our Partners</span>
+          <h2 class="text-headline-lg">Strong Partners.<br />Stronger Outcomes.</h2>
+          <p class="text-body-lg on-surface-variant max-w-xl" style="margin-inline: auto;">
+            We collaborate with trusted contractors, consultants, suppliers,
+            institutions, and strategic partners to deliver projects with
+            clarity and confidence.
+          </p>
+        </div>
+        <div data-partners-carousel></div>
       </div>
     </section>
 
     <section class="container-frame section">
       <div class="reveal flex-col gap-4" style="margin-bottom: 40px;">
-        <span class="text-label-caps on-surface-variant">Our Developments</span>
-        <h2 class="text-headline-lg">Landmark by Landmark</h2>
+        <span class="text-label-caps on-surface-variant">Insights</span>
+        <h2 class="text-headline-lg">Latest Thinking.</h2>
       </div>
-
-      <div class="carousel reveal" data-carousel>
-        <button type="button" class="carousel__arrow carousel__arrow--prev" aria-label="Previous">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m15 6-6 6 6 6"/></svg>
-        </button>
-        <div class="carousel__track">
-          <a href="/portfolio/meridian-tower/" class="home-card">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" alt="Meridian Tower" />
-            <div class="home-card__scrim"></div>
-            <div class="home-card__content">
-              <span class="text-headline-md">Meridian Tower</span>
-              <span class="text-body-md">Commercial · 62 floors</span>
-            </div>
-          </a>
-          <a href="/portfolio/aster-residences/" class="home-card">
-            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop" alt="The Aster Residences" />
-            <div class="home-card__scrim"></div>
-            <div class="home-card__content">
-              <span class="text-headline-md">The Aster Residences</span>
-              <span class="text-body-md">Residential · 160 units</span>
-            </div>
-          </a>
-          <a href="/portfolio/harbor-crossing-viaduct/" class="home-card">
-            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1200&auto=format&fit=crop" alt="Harbor Crossing Viaduct" />
-            <div class="home-card__scrim"></div>
-            <div class="home-card__content">
-              <span class="text-headline-md">Harbor Crossing Viaduct</span>
-              <span class="text-body-md">Infrastructure · 2.4km span</span>
-            </div>
-          </a>
-          <a href="/portfolio/lucerne-cultural-pavilion/" class="home-card">
-            <img src="https://images.unsplash.com/photo-1554435493-93422e8220c8?q=80&w=1200&auto=format&fit=crop" alt="Lucerne Cultural Pavilion" />
-            <div class="home-card__scrim"></div>
-            <div class="home-card__content">
-              <span class="text-headline-md">Lucerne Cultural Pavilion</span>
-              <span class="text-body-md">Cultural · 9,400 sqm</span>
-            </div>
-          </a>
-          <a href="/portfolio/copper-quarter-residences/" class="home-card">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop" alt="Copper Quarter Residences" />
-            <div class="home-card__scrim"></div>
-            <div class="home-card__content">
-              <span class="text-headline-md">Copper Quarter Residences</span>
-              <span class="text-body-md">Residential · 340 units</span>
-            </div>
-          </a>
-        </div>
-        <button type="button" class="carousel__arrow carousel__arrow--next" aria-label="Next">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 6 6 6-6 6"/></svg>
-        </button>
-        <div class="carousel__dots"></div>
-      </div>
+      <div class="grid-3" data-articles-teaser></div>
+      <a href="/insights/" class="text-label-caps w-fit mt-12" style="text-decoration: underline; display: inline-block;">View All Insights →</a>
     </section>
 
     <section class="surface-ink curve-top">
       <div class="container-frame section">
-        <div class="reveal text-center" style="margin-bottom: 48px;">
-          <h2 class="text-headline-lg">Why <img src="/images/logo.png" alt="AS5" class="inline-logo" /> Is Different.</h2>
-        </div>
-
-        <hr class="hairline reveal" style="margin-block: 40px;" />
-
         <div class="reveal flex-col gap-6" style="align-items: center; text-align: center;">
-          <h2 class="text-headline-lg">Where Vision Becomes Landmark.</h2>
-          <a href="/contact/" class="btn btn--outline-light">Inquire</a>
+          <h2 class="text-headline-lg">Ready to Build What's Next?</h2>
+          <p class="text-body-lg on-surface-variant max-w-xl">
+            Let's discuss your project, partnership, or development opportunity.
+          </p>
+          <div class="grid-2" style="grid-template-columns: 1fr 1fr; gap: 24px; align-items: center;">
+            <a href="/contact/" class="btn btn--outline-light">Schedule a Consultation</a>
+            <a href="/contact/" class="text-label-caps" style="text-decoration: underline;">Contact Our Team</a>
+          </div>
         </div>
       </div>
     </section>
@@ -302,6 +301,7 @@
   <footer class="footer">
     <div class="container-frame footer__inner">
       <img src="/images/logo.png" alt="AS5" class="footer__logo" />
+      <p class="text-body-md on-surface-variant" style="max-width: 420px;">Where Vision Becomes Landmark.</p>
       <div class="footer__columns">
         <div class="footer__group">
           <span class="text-label-caps">Call Us</span>
@@ -319,6 +319,7 @@
             <a href="/about/" class="footer__link text-body-md">About</a>
             <a href="/services/" class="footer__link text-body-md">Services</a>
             <a href="/portfolio/" class="footer__link text-body-md">Portfolio</a>
+            <a href="/insights/" class="footer__link text-body-md">Insights</a>
             <a href="/contact/" class="footer__link text-body-md">Contact</a>
           </nav>
         </div>
@@ -337,6 +338,14 @@
       </div>
     </div>
   </footer>
+  <script src="/js/data/projects.js" defer></script>
+  <script src="/js/data/partners.js" defer></script>
+  <script src="/js/data/statistics.js" defer></script>
+  <script src="/js/data/articles.js" defer></script>
+  <script src="/js/render-project-cards.js" defer></script>
+  <script src="/js/render-partners-carousel.js" defer></script>
+  <script src="/js/render-stats.js" defer></script>
+  <script src="/js/render-articles.js" defer></script>
   <script src="/js/main.js" defer></script>
   <script src="/js/contact-form.js" defer></script>
   <script src="/js/carousel.js" defer></script>

@@ -20,6 +20,7 @@
         <a href="/about/" class="navbar__link text-label-caps">About</a>
         <a href="/services/" class="navbar__link text-label-caps">Services</a>
         <a href="/portfolio/" class="navbar__link text-label-caps">Portfolio</a>
+        <a href="/insights/" class="navbar__link text-label-caps">Insights</a>
         <a href="/contact/" class="navbar__link text-label-caps is-active">Contact</a>
       </nav>
       <a href="/contact/" class="btn btn--primary navbar__cta">Inquire</a>
@@ -33,6 +34,7 @@
         <a href="/about/" class="text-label-caps">About</a>
         <a href="/services/" class="text-label-caps">Services</a>
         <a href="/portfolio/" class="text-label-caps">Portfolio</a>
+        <a href="/insights/" class="text-label-caps">Insights</a>
         <a href="/contact/" class="text-label-caps">Contact</a>
         <a href="/contact/" class="btn btn--primary">Inquire</a>
       </div>
@@ -67,7 +69,25 @@
           </div>
 
           <div class="field">
-            <label for="project" class="text-label-caps">Project of Interest</label>
+            <label for="company" class="text-label-caps">Company</label>
+            <input id="company" name="company" type="text" />
+            <p class="text-body-md field__error" data-error-for="company" hidden></p>
+          </div>
+
+          <div class="field">
+            <label for="inquiryType" class="text-label-caps">Inquiry Type</label>
+            <select id="inquiryType" name="inquiryType">
+              <option value="">Select an inquiry type</option>
+              <option value="construction-project">Construction Project</option>
+              <option value="partnership-opportunity">Partnership Opportunity</option>
+              <option value="general-inquiry">General Inquiry</option>
+              <option value="media-inquiry">Media Inquiry</option>
+              <option value="career-inquiry">Career Inquiry</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="project" class="text-label-caps">Project or Partnership Interest</label>
             <select id="project" name="project">
               <option value="">General inquiry</option>
               <option value="meridian-tower">Meridian Tower</option>
@@ -75,6 +95,25 @@
               <option value="harbor-crossing-viaduct">Harbor Crossing Viaduct</option>
               <option value="lucerne-cultural-pavilion">Lucerne Cultural Pavilion</option>
               <option value="copper-quarter-residences">Copper Quarter Residences</option>
+              <option value="greenview-court">Greenview Court</option>
+              <option value="riverbank-estates-partnership">Riverbank Estates Partnership</option>
+              <option value="horizon-office-park-collaboration">Horizon Office Park Collaboration</option>
+              <option value="sunset-villas-joint-development">Sunset Villas Joint Development</option>
+              <option value="nova-heights-development-partnership">Nova Heights Development Partnership</option>
+              <option value="eastgate-commercial-hub-partnership">Eastgate Commercial Hub Partnership</option>
+              <option value="unity-health-centre-collaboration">Unity Health Centre Collaboration</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="timeline" class="text-label-caps">Estimated Timeline</label>
+            <select id="timeline" name="timeline">
+              <option value="">Select a timeline</option>
+              <option value="immediate">Immediate (0–3 months)</option>
+              <option value="short-term">Short-term (3–6 months)</option>
+              <option value="medium-term">Medium-term (6–12 months)</option>
+              <option value="long-term">Long-term (12+ months)</option>
+              <option value="not-sure">Not sure yet</option>
             </select>
           </div>
 
@@ -102,6 +141,8 @@
           <span class="text-label-caps on-surface-variant">Our Office</span>
           <p class="text-body-md on-surface-variant">Nigeria</p>
           <p class="text-body-md on-surface-variant">as5entltd@gmail.com · +234 704 237 7442</p>
+          <span class="text-label-caps on-surface-variant mt-12">Business Hours</span>
+          <p class="text-body-md on-surface-variant">Monday – Friday, 9:00 – 17:00 WAT</p>
         </div>
 
         <div style="display: flex; aspect-ratio: 4 / 3; width: 100%; align-items: center; justify-content: center; border: 1px solid var(--color-outline-variant); background: var(--color-surface-alt);">
@@ -111,6 +152,26 @@
         <hr class="hairline" />
 
         <p class="text-body-md on-surface-variant">Our team responds within 1 business day.</p>
+
+        <hr class="hairline" />
+
+        <div class="flex-col gap-6">
+          <span class="text-label-caps on-surface-variant">Frequently Asked</span>
+          <div class="flex-col gap-2">
+            <span class="text-label-caps">What types of projects does AS5 undertake?</span>
+            <p class="text-body-md on-surface-variant">Construction developments across residential, commercial, infrastructure, and cultural projects, delivered directly or through strategic partnerships.</p>
+          </div>
+          <hr class="hairline" />
+          <div class="flex-col gap-2">
+            <span class="text-label-caps">Can AS5 collaborate on joint development opportunities?</span>
+            <p class="text-body-md on-surface-variant">Yes — partnership is one of our core delivery models. Select "Partnership Opportunity" above and tell us about the site or opportunity.</p>
+          </div>
+          <hr class="hairline" />
+          <div class="flex-col gap-2">
+            <span class="text-label-caps">How soon will the team respond?</span>
+            <p class="text-body-md on-surface-variant">Every inquiry is reviewed directly by our team, with a response within one business day.</p>
+          </div>
+        </div>
       </div>
     </section>
   </main>
@@ -118,6 +179,7 @@
   <footer class="footer">
     <div class="container-frame footer__inner">
       <img src="/images/logo.png" alt="AS5" class="footer__logo" />
+      <p class="text-body-md on-surface-variant" style="max-width: 420px;">Where Vision Becomes Landmark.</p>
       <div class="footer__columns">
         <div class="footer__group">
           <span class="text-label-caps">Call Us</span>
@@ -135,6 +197,7 @@
             <a href="/about/" class="footer__link text-body-md">About</a>
             <a href="/services/" class="footer__link text-body-md">Services</a>
             <a href="/portfolio/" class="footer__link text-body-md">Portfolio</a>
+            <a href="/insights/" class="footer__link text-body-md">Insights</a>
             <a href="/contact/" class="footer__link text-body-md">Contact</a>
           </nav>
         </div>

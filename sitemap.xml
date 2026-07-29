@@ -46,6 +46,76 @@
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://as5.example/portfolio/greenview-court/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://as5.example/portfolio/riverbank-estates-partnership/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://as5.example/portfolio/horizon-office-park-collaboration/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://as5.example/portfolio/sunset-villas-joint-development/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://as5.example/portfolio/nova-heights-development-partnership/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://as5.example/portfolio/eastgate-commercial-hub-partnership/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://as5.example/portfolio/unity-health-centre-collaboration/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://as5.example/insights/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://as5.example/insights/why-planning-determines-long-term-value/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://as5.example/insights/difference-between-construction-and-development/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://as5.example/insights/how-strong-partnerships-improve-project-delivery/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://as5.example/insights/what-milestone-governance-actually-prevents/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://as5.example/insights/reading-a-site-before-you-design-for-it/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://as5.example/insights/the-case-for-building-slower/</loc>
+    <changefreq>yearly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>https://as5.example/contact/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>

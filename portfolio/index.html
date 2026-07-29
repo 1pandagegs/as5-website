@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="/images/favicon.png" />
   <title>Portfolio — AS5_GROUP</title>
-  <meta name="description" content="The full AS5 portfolio of structural engineering and real estate development projects, filterable by status and type." />
+  <meta name="description" content="The full AS5 portfolio of construction projects and development partnerships, filterable by category and status." />
   <link rel="canonical" href="https://as5.example/portfolio/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,6 +20,7 @@
         <a href="/about/" class="navbar__link text-label-caps">About</a>
         <a href="/services/" class="navbar__link text-label-caps">Services</a>
         <a href="/portfolio/" class="navbar__link text-label-caps is-active">Portfolio</a>
+        <a href="/insights/" class="navbar__link text-label-caps">Insights</a>
         <a href="/contact/" class="navbar__link text-label-caps">Contact</a>
       </nav>
       <a href="/contact/" class="btn btn--primary navbar__cta">Inquire</a>
@@ -33,6 +34,7 @@
         <a href="/about/" class="text-label-caps">About</a>
         <a href="/services/" class="text-label-caps">Services</a>
         <a href="/portfolio/" class="text-label-caps">Portfolio</a>
+        <a href="/insights/" class="text-label-caps">Insights</a>
         <a href="/contact/" class="text-label-caps">Contact</a>
         <a href="/contact/" class="btn btn--primary">Inquire</a>
       </div>
@@ -43,24 +45,22 @@
     <section class="container-frame flex-col gap-6" style="padding-block: 96px 40px;">
       <h1 class="text-display-xl max-w-3xl">Every Development. One Standard.</h1>
       <p class="text-body-lg max-w-xl on-surface-variant">
-        From residential communities to civic infrastructure, every AS5
-        project carries the same commitment to purpose, quality, and
-        durability.
+        From construction projects to strategic collaborations, every AS5
+        engagement is guided by purpose, quality, and disciplined execution.
       </p>
     </section>
 
     <section class="container-frame section--tight">
       <div class="flex-col gap-3" style="margin-bottom: 40px;">
         <div class="filter-group">
+          <button type="button" class="filter-chip" data-filter-group="category" data-filter-value="">All</button>
+          <button type="button" class="filter-chip" data-filter-group="category" data-filter-value="construction">Construction</button>
+          <button type="button" class="filter-chip" data-filter-group="category" data-filter-value="partnerships">Partnerships</button>
+        </div>
+        <div class="filter-group">
           <button type="button" class="filter-chip" data-filter-group="status" data-filter-value="completed">Completed</button>
           <button type="button" class="filter-chip" data-filter-group="status" data-filter-value="in-progress">In Progress</button>
           <button type="button" class="filter-chip" data-filter-group="status" data-filter-value="concept-approved">Concept Approved</button>
-        </div>
-        <div class="filter-group">
-          <button type="button" class="filter-chip" data-filter-group="type" data-filter-value="residential">Residential</button>
-          <button type="button" class="filter-chip" data-filter-group="type" data-filter-value="commercial">Commercial</button>
-          <button type="button" class="filter-chip" data-filter-group="type" data-filter-value="infrastructure">Infrastructure</button>
-          <button type="button" class="filter-chip" data-filter-group="type" data-filter-value="cultural">Cultural</button>
         </div>
       </div>
 
@@ -68,86 +68,23 @@
         No projects match these filters yet.
       </p>
 
-      <div class="portfolio-grid" data-portfolio-grid>
-        <article class="project-card" data-status="in-progress" data-type="commercial">
-          <a href="/portfolio/meridian-tower/" class="project-card__media">
-            <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop" alt="Meridian Tower — a vertical spine of glass and steel engineered to bend, not break, with the wind." />
-            <span class="project-card__badge text-label-caps">In Progress</span>
-          </a>
-          <div class="flex-col gap-2">
-            <div class="project-card__meta">
-              <span class="text-label-caps">01</span>
-              <span class="text-label-caps">Commercial</span>
-            </div>
-            <h3 class="text-headline-md"><a href="/portfolio/meridian-tower/">Meridian Tower</a></h3>
-            <p class="text-body-md on-surface-variant">A vertical spine of glass and steel engineered to bend, not break, with the wind.</p>
-            <a href="/portfolio/meridian-tower/" class="text-label-caps project-card__link">View Specification →</a>
-          </div>
-        </article>
+      <div class="portfolio-grid" data-portfolio-grid data-project-grid></div>
+    </section>
 
-        <article class="project-card" data-status="completed" data-type="residential">
-          <a href="/portfolio/aster-residences/" class="project-card__media">
-            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?q=80&w=1200&auto=format&fit=crop" alt="The Aster Residences — a quiet residential landmark built around a private interior garden." />
-            <span class="project-card__badge text-label-caps">Completed</span>
-          </a>
-          <div class="flex-col gap-2">
-            <div class="project-card__meta">
-              <span class="text-label-caps">02</span>
-              <span class="text-label-caps">Residential</span>
-            </div>
-            <h3 class="text-headline-md"><a href="/portfolio/aster-residences/">The Aster Residences</a></h3>
-            <p class="text-body-md on-surface-variant">A quiet residential landmark built around a private interior garden.</p>
-            <a href="/portfolio/aster-residences/" class="text-label-caps project-card__link">View Specification →</a>
-          </div>
-        </article>
-
-        <article class="project-card" data-status="concept-approved" data-type="infrastructure">
-          <a href="/portfolio/harbor-crossing-viaduct/" class="project-card__media">
-            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?q=80&w=1200&auto=format&fit=crop" alt="Harbor Crossing Viaduct — a cable-stayed crossing engineered to move with the harbor, not against it." />
-            <span class="project-card__badge text-label-caps">Concept Approved</span>
-          </a>
-          <div class="flex-col gap-2">
-            <div class="project-card__meta">
-              <span class="text-label-caps">03</span>
-              <span class="text-label-caps">Infrastructure</span>
-            </div>
-            <h3 class="text-headline-md"><a href="/portfolio/harbor-crossing-viaduct/">Harbor Crossing Viaduct</a></h3>
-            <p class="text-body-md on-surface-variant">A cable-stayed crossing engineered to move with the harbor, not against it.</p>
-            <a href="/portfolio/harbor-crossing-viaduct/" class="text-label-caps project-card__link">View Specification →</a>
-          </div>
-        </article>
-
-        <article class="project-card" data-status="completed" data-type="cultural">
-          <a href="/portfolio/lucerne-cultural-pavilion/" class="project-card__media">
-            <img src="https://images.unsplash.com/photo-1554435493-93422e8220c8?q=80&w=1200&auto=format&fit=crop" alt="Lucerne Cultural Pavilion — a single cantilevered roof plane unifying three galleries around an open civic court." />
-            <span class="project-card__badge text-label-caps">Completed</span>
-          </a>
-          <div class="flex-col gap-2">
-            <div class="project-card__meta">
-              <span class="text-label-caps">04</span>
-              <span class="text-label-caps">Cultural</span>
-            </div>
-            <h3 class="text-headline-md"><a href="/portfolio/lucerne-cultural-pavilion/">Lucerne Cultural Pavilion</a></h3>
-            <p class="text-body-md on-surface-variant">A single cantilevered roof plane unifying three galleries around an open civic court.</p>
-            <a href="/portfolio/lucerne-cultural-pavilion/" class="text-label-caps project-card__link">View Specification →</a>
-          </div>
-        </article>
-
-        <article class="project-card" data-status="in-progress" data-type="residential">
-          <a href="/portfolio/copper-quarter-residences/" class="project-card__media">
-            <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=1200&auto=format&fit=crop" alt="Copper Quarter Residences — a low-rise residential quarter organized around shared courtyards instead of a single tower." />
-            <span class="project-card__badge text-label-caps">In Progress</span>
-          </a>
-          <div class="flex-col gap-2">
-            <div class="project-card__meta">
-              <span class="text-label-caps">05</span>
-              <span class="text-label-caps">Residential</span>
-            </div>
-            <h3 class="text-headline-md"><a href="/portfolio/copper-quarter-residences/">Copper Quarter Residences</a></h3>
-            <p class="text-body-md on-surface-variant">A low-rise residential quarter organized around shared courtyards instead of a single tower.</p>
-            <a href="/portfolio/copper-quarter-residences/" class="text-label-caps project-card__link">View Specification →</a>
-          </div>
-        </article>
+    <section class="surface-alt section--tight">
+      <div class="container-frame flex-col gap-8">
+        <div class="reveal flex-col gap-4 text-center">
+          <span class="text-label-caps on-surface-variant">Our Partners</span>
+          <h2 class="text-headline-lg">Built Through Collaboration.</h2>
+          <p class="text-body-lg on-surface-variant max-w-xl" style="margin-inline: auto;">
+            Our partnerships bring together expertise, resources, and
+            aligned standards to deliver stronger outcomes.
+          </p>
+        </div>
+        <div data-partners-carousel></div>
+        <div class="text-center">
+          <a href="/contact/" class="btn btn--secondary">Discuss a Partnership</a>
+        </div>
       </div>
     </section>
 
@@ -162,6 +99,7 @@
   <footer class="footer">
     <div class="container-frame footer__inner">
       <img src="/images/logo.png" alt="AS5" class="footer__logo" />
+      <p class="text-body-md on-surface-variant" style="max-width: 420px;">Where Vision Becomes Landmark.</p>
       <div class="footer__columns">
         <div class="footer__group">
           <span class="text-label-caps">Call Us</span>
@@ -179,6 +117,7 @@
             <a href="/about/" class="footer__link text-body-md">About</a>
             <a href="/services/" class="footer__link text-body-md">Services</a>
             <a href="/portfolio/" class="footer__link text-body-md">Portfolio</a>
+            <a href="/insights/" class="footer__link text-body-md">Insights</a>
             <a href="/contact/" class="footer__link text-body-md">Contact</a>
           </nav>
         </div>
@@ -197,6 +136,10 @@
       </div>
     </div>
   </footer>
+  <script src="/js/data/projects.js" defer></script>
+  <script src="/js/data/partners.js" defer></script>
+  <script src="/js/render-project-cards.js" defer></script>
+  <script src="/js/render-partners-carousel.js" defer></script>
   <script src="/js/main.js" defer></script>
   <script src="/js/contact-form.js" defer></script>
   <script src="/js/portfolio-filter.js" defer></script>

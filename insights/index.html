@@ -4,8 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/png" href="/images/favicon.png" />
-  <title>Page Not Found — AS5_GROUP</title>
-  <meta name="robots" content="noindex" />
+  <title>Insights — AS5_GROUP</title>
+  <meta name="description" content="AS5's thinking on development, construction, planning, and partnerships." />
+  <link rel="canonical" href="https://as5.example/insights/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
@@ -19,7 +20,7 @@
         <a href="/about/" class="navbar__link text-label-caps">About</a>
         <a href="/services/" class="navbar__link text-label-caps">Services</a>
         <a href="/portfolio/" class="navbar__link text-label-caps">Portfolio</a>
-        <a href="/insights/" class="navbar__link text-label-caps">Insights</a>
+        <a href="/insights/" class="navbar__link text-label-caps is-active">Insights</a>
         <a href="/contact/" class="navbar__link text-label-caps">Contact</a>
       </nav>
       <a href="/contact/" class="btn btn--primary navbar__cta">Inquire</a>
@@ -41,13 +42,42 @@
   </header>
 
   <main>
-    <section class="container-frame flex-col gap-8" style="flex: 1; justify-content: center; align-items: flex-start; padding-block: 96px;">
-      <span class="text-label-caps on-surface-variant">404</span>
-      <h1 class="text-display-xl max-w-2xl">This Structure Doesn&rsquo;t Exist.</h1>
-      <p class="text-body-lg max-w-md on-surface-variant">
-        The page you&rsquo;re looking for has moved, or was never built.
+    <section class="container-frame flex-col gap-6" style="padding-block: 96px 40px;">
+      <h1 class="text-display-xl max-w-3xl">Ideas That Shape Better Development.</h1>
+      <p class="text-body-lg max-w-xl on-surface-variant">
+        AS5's thinking on development, construction, planning, and
+        partnerships — written the way we work: direct, and unhurried.
       </p>
-      <a href="/" class="btn btn--primary">Return Home</a>
+    </section>
+
+    <section class="container-frame section--tight">
+      <div class="filter-group" data-insights-filter style="margin-bottom: 40px;">
+        <button type="button" class="filter-chip" data-filter-value="">All</button>
+        <button type="button" class="filter-chip" data-filter-value="development">Development</button>
+        <button type="button" class="filter-chip" data-filter-value="construction">Construction</button>
+        <button type="button" class="filter-chip" data-filter-value="partnerships">Partnerships</button>
+        <button type="button" class="filter-chip" data-filter-value="planning">Planning</button>
+        <button type="button" class="filter-chip" data-filter-value="industry-perspective">Industry Perspective</button>
+      </div>
+
+      <div class="grid-3" data-articles-grid></div>
+    </section>
+
+    <section class="surface-ink curve-top curve-bottom section--tight" style="margin-block: 24px;">
+      <div class="container-frame flex-col gap-6" style="align-items: center; text-align: center;">
+        <span class="quote-block__dot" style="margin-inline: auto;"></span>
+        <p class="text-headline-md max-w-2xl" style="font-weight: 400; text-transform: none;">
+          "The best development decisions are the quiet ones — made early,
+          and rarely noticed by the time a project is finished."
+        </p>
+      </div>
+    </section>
+
+    <section class="container-frame section--tight">
+      <div class="reveal flex-col gap-8" style="align-items: flex-start;">
+        <h2 class="text-headline-lg max-w-2xl">Ready to Build What's Next?</h2>
+        <a href="/contact/" class="btn btn--primary">Inquire</a>
+      </div>
     </section>
   </main>
 
@@ -91,7 +121,10 @@
       </div>
     </div>
   </footer>
+  <script src="/js/data/articles.js" defer></script>
+  <script src="/js/render-articles.js" defer></script>
   <script src="/js/main.js" defer></script>
   <script src="/js/contact-form.js" defer></script>
+  <script src="/js/insights-filter.js" defer></script>
 </body>
 </html>

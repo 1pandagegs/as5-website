@@ -20,6 +20,7 @@
         <a href="/about/" class="navbar__link text-label-caps is-active">About</a>
         <a href="/services/" class="navbar__link text-label-caps">Services</a>
         <a href="/portfolio/" class="navbar__link text-label-caps">Portfolio</a>
+        <a href="/insights/" class="navbar__link text-label-caps">Insights</a>
         <a href="/contact/" class="navbar__link text-label-caps">Contact</a>
       </nav>
       <a href="/contact/" class="btn btn--primary navbar__cta">Inquire</a>
@@ -33,6 +34,7 @@
         <a href="/about/" class="text-label-caps">About</a>
         <a href="/services/" class="text-label-caps">Services</a>
         <a href="/portfolio/" class="text-label-caps">Portfolio</a>
+        <a href="/insights/" class="text-label-caps">Insights</a>
         <a href="/contact/" class="text-label-caps">Contact</a>
         <a href="/contact/" class="btn btn--primary">Inquire</a>
       </div>
@@ -49,18 +51,54 @@
       </p>
     </section>
 
-    <section class="container-frame section grid-2">
-      <div class="reveal flex-col gap-6">
-        <span class="text-label-caps on-surface-variant">Our Approach</span>
-        <h2 class="text-headline-lg">From Land to Landmark.</h2>
-        <p class="text-body-lg on-surface-variant">
-          From land preparation to final delivery, every project is guided
-          by structured oversight, transparency, and quality control.
-          That's how visions become landmarks and promises become results.
-        </p>
+    <section class="container-frame section flex-col gap-16">
+      <div class="grid-2">
+        <div class="reveal flex-col gap-6">
+          <span class="text-label-caps on-surface-variant">Our Approach</span>
+          <h2 class="text-headline-lg">From Land to Landmark.</h2>
+          <p class="text-body-lg on-surface-variant">
+            From land preparation to final delivery, every project is guided
+            by structured oversight, transparency, and quality control —
+            through opportunity assessment, planning, design coordination,
+            construction supervision, quality control, and delivery. That's
+            how visions become landmarks and promises become results.
+          </p>
+        </div>
+        <div class="reveal" style="position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: var(--radius-lg);">
+          <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=1600&auto=format&fit=crop" alt="TODO: replace with client photography" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(1);" />
+        </div>
       </div>
-      <div class="reveal" style="position: relative; aspect-ratio: 4 / 5; overflow: hidden; border-radius: var(--radius-lg);">
-        <img src="https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=1600&auto=format&fit=crop" alt="TODO: replace with client photography" style="width: 100%; height: 100%; object-fit: cover; filter: grayscale(1);" />
+
+      <div class="reveal stage-timeline" data-stage-timeline>
+        <div class="stage-timeline__list">
+          <button type="button" class="stage-timeline__item" data-stage="01" data-description="Every site and opportunity is evaluated on its own terms before any commitment is made.">
+            <span class="text-label-caps">01</span>
+            <span class="stage-timeline__label text-body-md">Opportunity Assessment</span>
+          </button>
+          <button type="button" class="stage-timeline__item" data-stage="02" data-description="A clear plan is set before ground is broken — scope, budget, and timeline aligned from day one.">
+            <span class="text-label-caps">02</span>
+            <span class="stage-timeline__label text-body-md">Planning</span>
+          </button>
+          <button type="button" class="stage-timeline__item" data-stage="03" data-description="Architecture, engineering, and technical consultants are aligned around one coherent vision.">
+            <span class="text-label-caps">03</span>
+            <span class="stage-timeline__label text-body-md">Design Coordination</span>
+          </button>
+          <button type="button" class="stage-timeline__item" data-stage="04" data-description="Every phase is directly supervised, not just managed from a distance.">
+            <span class="text-label-caps">04</span>
+            <span class="stage-timeline__label text-body-md">Construction Supervision</span>
+          </button>
+          <button type="button" class="stage-timeline__item" data-stage="05" data-description="Materials, workmanship, and progress are verified against our own standard, not just the minimum.">
+            <span class="text-label-caps">05</span>
+            <span class="stage-timeline__label text-body-md">Quality Control</span>
+          </button>
+          <button type="button" class="stage-timeline__item" data-stage="06" data-description="Handover is treated as the start of a relationship, not the end of a project.">
+            <span class="text-label-caps">06</span>
+            <span class="stage-timeline__label text-body-md">Delivery</span>
+          </button>
+        </div>
+        <div class="stage-timeline__detail">
+          <p class="text-body-lg on-surface-variant" data-stage-detail-text></p>
+        </div>
       </div>
     </section>
 
@@ -91,6 +129,22 @@
             <svg class="service-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.4 8 11 4.6-2.6 8-6 8-11V5l-8-3Z"/></svg>
             <span class="text-body-lg">Construction standards that prioritize durability.</span>
           </li>
+          <li class="reveal service-list__item">
+            <svg class="service-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 8v4l3 3"/><circle cx="12" cy="12" r="9"/></svg>
+            <span class="text-body-lg">Long-term thinking over short-term wins.</span>
+          </li>
+          <li class="reveal service-list__item">
+            <svg class="service-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            <span class="text-body-lg">Transparent delivery, from first plan to handover.</span>
+          </li>
+          <li class="reveal service-list__item">
+            <svg class="service-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2 4 5v6c0 5 3.4 8.4 8 11 4.6-2.6 8-6 8-11V5l-8-3Z"/><path d="m9 12 2 2 4-4"/></svg>
+            <span class="text-body-lg">Responsible material selection at every stage.</span>
+          </li>
+          <li class="reveal service-list__item">
+            <svg class="service-list__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>
+            <span class="text-body-lg">Structured oversight from concept to completion.</span>
+          </li>
         </ul>
       </div>
     </section>
@@ -118,16 +172,39 @@
       </div>
     </section>
 
-    <section class="container-frame section flex-col gap-8">
-      <div class="reveal flex-col gap-4 max-w-2xl">
-        <span class="text-label-caps on-surface-variant">Leadership</span>
-        <h2 class="text-headline-lg">The Team Behind <img src="/images/logo-black.png" alt="AS5" class="inline-logo" />.</h2>
-        <p class="text-body-lg on-surface-variant">
-          <img src="/images/logo-black.png" alt="AS5" class="inline-logo" /> is led by a team that treats every commitment as personal —
-          precise in execution, transparent in process, and accountable
-          for the outcome.
+    <section class="surface-ink curve-top curve-bottom section" style="margin-block: 24px;">
+      <div class="container-frame flex-col gap-6" style="align-items: center; text-align: center;">
+        <h2 class="text-display-xl max-w-3xl">We Build for the Years Ahead.</h2>
+        <p class="text-body-lg on-surface-variant max-w-xl">
+          Every decision we make is guided by durability, relevance, and the
+          responsibility to create projects that continue to serve people
+          long after construction is complete.
         </p>
       </div>
+    </section>
+
+    <section class="container-frame section flex-col gap-16">
+      <div class="flex-col gap-8">
+        <div class="reveal flex-col gap-4 max-w-2xl">
+          <span class="text-label-caps on-surface-variant">Leadership</span>
+          <h2 class="text-headline-lg">The Team Behind <img src="/images/logo-black.png" alt="AS5" class="inline-logo" />.</h2>
+          <p class="text-body-lg on-surface-variant">
+            <img src="/images/logo-black.png" alt="AS5" class="inline-logo" /> is led by a team that treats every commitment as personal —
+            precise in execution, transparent in process, and accountable
+            for the outcome.
+          </p>
+        </div>
+
+        <div class="reveal quote-block max-w-2xl" style="margin-inline: auto;">
+          <span class="quote-block__dot" style="background: var(--color-ink);"></span>
+          <p class="text-headline-md" style="font-weight: 400; text-transform: none;">
+            "We are not interested in building for the moment. We are building
+            for lasting relevance."
+          </p>
+          <span class="text-label-caps on-surface-variant">Name Pending — Chief Executive Officer</span>
+        </div>
+      </div>
+
       <div class="team-grid">
         <div class="reveal team-card">
           <div class="team-card__photo">
@@ -160,6 +237,46 @@
       </div>
     </section>
 
+    <section class="surface-alt section">
+      <div class="container-frame flex-col gap-8">
+        <div class="reveal flex-col gap-4 max-w-2xl">
+          <span class="text-label-caps on-surface-variant">Our History</span>
+          <h2 class="text-headline-lg">Company Timeline.</h2>
+        </div>
+        <div class="reveal stage-timeline" data-stage-timeline>
+          <div class="stage-timeline__list">
+            <button type="button" class="stage-timeline__item" data-stage="01" data-description="AS5 is established with a clear focus: development and construction built on planning, discipline, and long-term thinking.">
+              <span class="text-label-caps">01</span>
+              <span class="stage-timeline__label text-body-md">Foundation</span>
+            </button>
+            <button type="button" class="stage-timeline__item" data-stage="02" data-description="Our first project is delivered, setting the standard every development since has been measured against.">
+              <span class="text-label-caps">02</span>
+              <span class="stage-timeline__label text-body-md">First Development</span>
+            </button>
+            <button type="button" class="stage-timeline__item" data-stage="03" data-description="We extend beyond construction into full project management — coordinating design, procurement, and delivery under one process.">
+              <span class="text-label-caps">03</span>
+              <span class="stage-timeline__label text-body-md">Project Management</span>
+            </button>
+            <button type="button" class="stage-timeline__item" data-stage="04" data-description="AS5 begins collaborating with strategic partners, extending our capacity without compromising our standards.">
+              <span class="text-label-caps">04</span>
+              <span class="stage-timeline__label text-body-md">Partnership Growth</span>
+            </button>
+            <button type="button" class="stage-timeline__item" data-stage="05" data-description="A growing portfolio of construction and partnership projects, each held to the same standard of purpose and quality.">
+              <span class="text-label-caps">05</span>
+              <span class="stage-timeline__label text-body-md">Current Portfolio</span>
+            </button>
+            <button type="button" class="stage-timeline__item" data-stage="06" data-description="We continue to build toward larger, more ambitious developments — without losing sight of the discipline that got us here.">
+              <span class="text-label-caps">06</span>
+              <span class="stage-timeline__label text-body-md">Future Direction</span>
+            </button>
+          </div>
+          <div class="stage-timeline__detail">
+            <p class="text-body-lg on-surface-variant" data-stage-detail-text></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section class="container-frame section">
       <div class="reveal flex-col gap-8" style="align-items: flex-start;">
         <h2 class="text-headline-lg max-w-2xl">Where Vision Becomes Landmark.</h2>
@@ -171,6 +288,7 @@
   <footer class="footer">
     <div class="container-frame footer__inner">
       <img src="/images/logo.png" alt="AS5" class="footer__logo" />
+      <p class="text-body-md on-surface-variant" style="max-width: 420px;">Where Vision Becomes Landmark.</p>
       <div class="footer__columns">
         <div class="footer__group">
           <span class="text-label-caps">Call Us</span>
@@ -188,6 +306,7 @@
             <a href="/about/" class="footer__link text-body-md">About</a>
             <a href="/services/" class="footer__link text-body-md">Services</a>
             <a href="/portfolio/" class="footer__link text-body-md">Portfolio</a>
+            <a href="/insights/" class="footer__link text-body-md">Insights</a>
             <a href="/contact/" class="footer__link text-body-md">Contact</a>
           </nav>
         </div>
@@ -208,5 +327,6 @@
   </footer>
   <script src="/js/main.js" defer></script>
   <script src="/js/contact-form.js" defer></script>
+  <script src="/js/stage-timeline.js" defer></script>
 </body>
 </html>

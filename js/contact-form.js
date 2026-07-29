@@ -1,7 +1,7 @@
 (function () {
   "use strict";
 
-  var fieldNames = ["name", "email", "phone", "project", "message"];
+  var fieldNames = ["name", "email", "phone", "company", "inquiryType", "project", "timeline", "message"];
 
   function setFieldError(form, name, message) {
     var errorEl = form.querySelector('[data-error-for="' + name + '"]');
@@ -61,7 +61,10 @@
         name: String(formData.get("name") || ""),
         email: String(formData.get("email") || ""),
         phone: String(formData.get("phone") || "") || undefined,
+        company: String(formData.get("company") || "") || undefined,
+        inquiryType: String(formData.get("inquiryType") || "") || undefined,
         project: String(formData.get("project") || "") || undefined,
+        timeline: String(formData.get("timeline") || "") || undefined,
         message: String(formData.get("message") || ""),
       };
 

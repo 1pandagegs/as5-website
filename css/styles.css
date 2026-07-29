@@ -347,6 +347,13 @@ main {
   align-items: center;
   justify-content: space-between;
   height: 84px;
+  transition: height 200ms ease;
+}
+.navbar.is-scrolled .navbar__bar {
+  height: 64px;
+}
+.navbar.is-scrolled {
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .navbar__logo {
@@ -789,11 +796,22 @@ main {
 .project-card {
   display: flex;
   flex-direction: column;
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-sm);
   border: 1px solid var(--color-outline-variant);
   overflow: hidden;
   background: var(--color-surface);
   transition: transform 350ms ease, box-shadow 350ms ease, border-color 350ms ease;
+}
+.project-card--wide {
+  grid-column: span 1;
+}
+@media (min-width: 640px) {
+  .project-card--wide {
+    grid-column: span 2;
+  }
+  .project-card--wide .project-card__media {
+    aspect-ratio: 21 / 9;
+  }
 }
 .project-card:hover {
   transform: translateY(-6px);
@@ -939,6 +957,218 @@ main {
 .portfolio-grid > * {
   opacity: 1;
   transition: opacity 300ms ease;
+}
+
+/* ---------------------------------------------------------- */
+/* Principle grid (numbered principle + icon + thin divider)     */
+/* Used on the dark "Built to Last" brand-standard section — not  */
+/* boxed cards, just a restrained divided row.                    */
+/* ---------------------------------------------------------- */
+
+.principle-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 28px 24px;
+}
+@media (min-width: 768px) {
+  .principle-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0;
+  }
+}
+.principle-item {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+@media (min-width: 768px) {
+  .principle-item {
+    padding-inline: 24px;
+    border-left: 1px solid rgba(255, 255, 255, 0.16);
+  }
+  .principle-item:first-child {
+    padding-left: 0;
+    border-left: none;
+  }
+}
+.principle-item__number {
+  color: rgba(255, 255, 255, 0.5);
+}
+.principle-item__icon {
+  width: 24px;
+  height: 24px;
+  color: var(--color-on-ink);
+}
+
+/* ---------------------------------------------------------- */
+/* Stage timeline (numbered stages, click to reveal detail)      */
+/* Shared by the Services process timeline, each project page's  */
+/* concept-to-completion timeline, and the About company timeline. */
+/* ---------------------------------------------------------- */
+
+.stage-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.stage-timeline__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 4px;
+  border-top: 1px solid var(--color-outline-variant);
+}
+.surface-ink .stage-timeline__list {
+  border-top-color: rgba(255, 255, 255, 0.16);
+}
+.stage-timeline__item {
+  flex: 1 1 auto;
+  min-width: 96px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 16px 4px 0;
+  margin-top: -1px;
+  background: none;
+  border: none;
+  border-top: 2px solid transparent;
+  text-align: left;
+  color: var(--color-on-surface-variant);
+  transition: color 200ms ease, border-color 200ms ease;
+}
+.stage-timeline__item:hover {
+  color: var(--color-on-surface);
+}
+.stage-timeline__item.is-active {
+  border-top-color: var(--color-ink);
+  color: var(--color-on-surface);
+}
+.surface-ink .stage-timeline__item {
+  color: rgba(255, 255, 255, 0.55);
+}
+.surface-ink .stage-timeline__item:hover {
+  color: var(--color-on-ink);
+}
+.surface-ink .stage-timeline__item.is-active {
+  border-top-color: var(--color-on-ink);
+  color: var(--color-on-ink);
+}
+.stage-timeline__label {
+  font-weight: 600;
+}
+.stage-timeline__detail {
+  max-width: 640px;
+}
+
+/* ---------------------------------------------------------- */
+/* Partner marquee (infinite auto-scrolling logo loop)           */
+/* ---------------------------------------------------------- */
+
+.partner-marquee {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, black 8%, black 92%, transparent);
+}
+.partner-marquee__track {
+  display: flex;
+  align-items: center;
+  gap: 56px;
+  width: max-content;
+  animation: partner-marquee-scroll 32s linear infinite;
+}
+.partner-marquee:hover .partner-marquee__track,
+.partner-marquee:focus-within .partner-marquee__track {
+  animation-play-state: paused;
+}
+@keyframes partner-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+.partner-logo {
+  flex-shrink: 0;
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-on-surface-variant);
+  opacity: 0.55;
+  white-space: nowrap;
+  transition: opacity 200ms ease, color 200ms ease;
+}
+.partner-logo:hover {
+  opacity: 1;
+  color: var(--color-on-surface);
+}
+.surface-ink .partner-logo {
+  color: rgba(255, 255, 255, 0.55);
+}
+.surface-ink .partner-logo:hover {
+  opacity: 1;
+  color: var(--color-on-ink);
+}
+
+/* ---------------------------------------------------------- */
+/* Insight cards (Insights articles — teaser + index grid)       */
+/* ---------------------------------------------------------- */
+
+.insight-card {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--color-outline-variant);
+  overflow: hidden;
+  background: var(--color-surface);
+  transition: transform 350ms ease, box-shadow 350ms ease, border-color 350ms ease;
+}
+.insight-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 56px rgba(10, 10, 11, 0.14);
+  border-color: var(--color-ink);
+}
+.insight-card__media {
+  position: relative;
+  overflow: hidden;
+  background: var(--color-surface-alt);
+  aspect-ratio: 16 / 9;
+}
+.insight-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: grayscale(1);
+  transition: transform 600ms ease;
+}
+.insight-card:hover .insight-card__media img {
+  transform: scale(1.06);
+}
+.insight-card > .flex-col {
+  padding: 22px 24px 26px;
+  gap: 10px;
+  border-top: 1px solid var(--color-outline-variant);
+}
+.insight-card--featured {
+  grid-column: 1 / -1;
+}
+@media (min-width: 768px) {
+  .insight-card--featured {
+    display: grid;
+    grid-template-columns: 1.2fr 1fr;
+  }
+  .insight-card--featured .insight-card__media {
+    aspect-ratio: auto;
+    height: 100%;
+  }
+  .insight-card--featured > .flex-col {
+    border-top: none;
+    border-left: 1px solid var(--color-outline-variant);
+    justify-content: center;
+    padding: 32px 40px;
+  }
 }
 
 /* ---------------------------------------------------------- */
@@ -1103,6 +1333,14 @@ main {
 .carousel__track > * {
   scroll-snap-align: start;
   flex: 0 0 auto;
+}
+.carousel__track > .project-card {
+  width: 320px;
+}
+@media (min-width: 768px) {
+  .carousel__track > .project-card {
+    width: 360px;
+  }
 }
 .carousel__arrow {
   display: none;
@@ -1384,10 +1622,12 @@ textarea:focus-visible {
   display: flex;
   flex-direction: column;
 }
+.gap-1 { gap: 4px; }
 .gap-2 { gap: 8px; }
 .gap-4 { gap: 16px; }
 .gap-6 { gap: 24px; }
 .gap-8 { gap: 32px; }
+.gap-16 { gap: 64px; }
 .max-w-sm { max-width: 380px; }
 .max-w-md { max-width: 480px; }
 .max-w-xl { max-width: 620px; }
