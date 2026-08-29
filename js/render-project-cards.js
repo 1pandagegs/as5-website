@@ -81,7 +81,15 @@
 
   function renderProjectGrid(container) {
     if (!container) return;
-    renderInto(container, window.AS5_PROJECTS, {
+    var projects = window.AS5_PROJECTS;
+    var visibleCategories = (container.getAttribute("data-visible-categories") || "")
+      .split(",").map(function (s) { return s.trim(); }).filter(Boolean);
+    if (visibleCategories.length) {
+      projects = projects.filter(function (project) {
+        return visibleCategories.indexOf(project.category) !== -1;
+      });
+    }
+    renderInto(container, projects, {
       showMeta: true,
       showDescription: true,
       linkLabel: "View Specification →",
