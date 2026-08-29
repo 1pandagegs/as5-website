@@ -15,6 +15,8 @@
     completed: "Completed",
     "in-progress": "In Progress",
     "concept-approved": "Concept Approved",
+    awarded: "Awarded",
+    partnership: "Partnership",
   };
 
   function el(html) {
