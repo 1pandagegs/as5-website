@@ -65,3 +65,18 @@ Drop replacement images directly into `/images/` using the exact filenames below
 - Use high-quality compression, ideally 75–85%.
 - Keep important subjects away from extreme edges because responsive crops vary by device.
 - Do not rename the files after adding them; replacing a file with the same name updates the website without HTML changes.
+
+
+## Additional gallery images (V6)
+
+### Soho Boulevard
+- project-soho-boulevard-02-wellness.jpg
+- project-soho-boulevard-03-sports.jpg
+- project-soho-boulevard-04-dining.jpg
+- project-soho-boulevard-05-community.jpg
+
+### Keystone Polo Partnership
+- project-keystone-polo-partnership-02-brand-presence.jpg
+- project-keystone-polo-partnership-03-event-action.jpg
+- project-keystone-polo-partnership-04-community.jpg
+- project-keystone-polo-partnership-05-partnership-moment.jpg
