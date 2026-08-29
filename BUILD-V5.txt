@@ -1,0 +1,4 @@
+AS5 website refinement v5
+- Portfolio status filter removed
+- Email updated sitewide to info.as5group.com
+- Instagram and LinkedIn footer icons linked sitewide

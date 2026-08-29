@@ -23,7 +23,7 @@
 10. Office address and map coordinates/embed if AS5 wants a public map.
 11. Final social-media URLs.
 12. Confirm production domain is `as5.ng`; if not, update canonical URLs and sitemap.
-13. Confirm `as5entltd@gmail.com` and +234 704 237 7442 are final public contacts.
+13. Confirm `info.as5group.com` and +234 704 237 7442 are final public contacts.
 14. Review/approve Insights articles; current editorial articles originated as placeholder/in-house copy in the original build.
 15. Final legal/privacy review.
 
