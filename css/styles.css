@@ -1802,3 +1802,34 @@ body { letter-spacing: -0.005em; }
   .hero__actions .btn { flex: 0 1 auto; min-width: 140px; }
   .project-hero { min-height: 46svh; padding-top: 100px; }
 }
+
+
+/* AS5 refinement v4 */
+.text-headline-lg .inline-logo, .text-display-xl .inline-logo, .text-headline-md .inline-logo {
+  height: 1.06em !important;
+  width: auto;
+  vertical-align: -0.12em;
+}
+.filter-group--categories {
+  display: flex;
+  flex-wrap: nowrap !important;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  white-space: nowrap;
+}
+.filter-group--categories::-webkit-scrollbar { display: none; }
+.filter-group--categories .filter-chip { flex: 0 0 auto; }
+.team-card__photo--image { position: relative; overflow: hidden; }
+.team-card__photo--image img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; }
+.project-photo-slot {
+  position: relative; min-height: 320px; overflow: hidden; background: #eee; border: 1px solid rgba(15,17,16,.12); margin:0;
+}
+.project-photo-slot--wide { grid-column: span 2; min-height: 420px; }
+.project-photo-slot > img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; z-index:2; }
+.project-photo-slot figcaption { position:absolute; inset:0; display:flex; flex-direction:column; justify-content:flex-end; gap:6px; padding:24px; z-index:1; color:#111; }
+.project-photo-slot figcaption span, .project-photo-slot figcaption code { font: 700 11px/1.4 var(--font-body); letter-spacing:.08em; text-transform:uppercase; }
+.project-photo-slot figcaption strong { font: 400 20px/1.15 var(--font-display); text-transform:uppercase; }
+.project-photo-slot figcaption small { font: 400 14px/1.5 var(--font-body); max-width:520px; }
+.project-photo-slot figcaption code { opacity:.52; margin-top:8px; text-transform:none; }
+@media (max-width: 767px) { .project-photo-slot--wide { grid-column:auto; min-height:320px; } }

@@ -49,7 +49,7 @@
     var card = el(
       '<article class="project-card' + wideClass + '" data-status="' + project.status + '" data-category="' + project.category + '">' +
         '<a href="' + href + '" class="project-card__media">' +
-          '<img src="' + project.heroImage + '" alt="' + project.title + ' — ' + project.tagline + '" />' +
+          '<img src="' + project.heroImage + '" alt="' + project.title + ' — ' + project.tagline + '"' + (project.fallbackImage ? ' onerror="this.onerror=null;this.src=\'' + project.fallbackImage + '\'"' : '') + ' />' +
           '<span class="project-card__badge text-label-caps">' + statusLabel + "</span>" +
         "</a>" +
         '<div class="flex-col gap-2">' +
