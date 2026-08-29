@@ -1,0 +1,4 @@
+AS5 refinement v8
+- Full-colour photography sitewide
+- Homepage remains monochrome
+- Homepage hero reverted to previous architectural image until final high-resolution replacement
