@@ -1,5 +1,5 @@
-User-Agent: *
+User-agent: *
 Allow: /
 Disallow: /api/
 
-Sitemap: https://as5.example/sitemap.xml
+Sitemap: https://as5group.com/sitemap.xml

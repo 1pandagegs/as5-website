@@ -22,6 +22,7 @@
     mobileMenu.classList.remove("is-open");
     toggle.classList.remove("is-open");
     toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", "Open menu");
     navbar.classList.remove("is-menu-open");
   }
 
@@ -30,6 +31,7 @@
       var isOpen = mobileMenu.classList.toggle("is-open");
       toggle.classList.toggle("is-open", isOpen);
       toggle.setAttribute("aria-expanded", String(isOpen));
+      toggle.setAttribute("aria-label", isOpen ? "Close menu" : "Open menu");
       navbar.classList.toggle("is-menu-open", isOpen);
     });
 
@@ -39,6 +41,13 @@
         el.addEventListener("click", closeMobileMenu);
       }
     );
+
+    document.addEventListener("keydown", function (event) {
+      if (event.key === "Escape" && mobileMenu.classList.contains("is-open")) {
+        closeMobileMenu();
+        toggle.focus();
+      }
+    });
   }
 
   /* ---------------- Scroll reveal ---------------- */
@@ -93,6 +102,7 @@
   }
 
   /* ---------------- Footer year ---------------- */
+  // The year is also hardcoded in the HTML so it is never blank without JS.
   Array.prototype.forEach.call(
     document.querySelectorAll("[data-year]"),
     function (el) {

@@ -1,12 +1,14 @@
 # AS5 Website Image Naming Convention
 
-Drop replacement images directly into `/images/` using the exact filenames below. The website is already wired to look for these names first; while a file is missing, the current stock fallback remains visible where one exists.
+Drop replacement images into `/images/` using the exact filenames below, then run `npm run images`. That writes the compressed `.webp` the pages actually load. There are no stock or Unsplash fallbacks any more: every image is self-hosted.
+
+Slots with no photography yet borrow other AS5 images: `home-about` uses `project-three-of-us-10`, `about-approach` uses `services-development`, and the Insights articles reuse project/service photos. The two FMWR&S projects use `project-institutional-placeholder.webp` and a typographic hero. When real files arrive, add them and update the `src` in the page (or `heroImage` in `js/data/*.js`, then `npm run prerender`).
 
 ## Brand assets (already present)
 - `logo.png` — white AS5 logo for dark backgrounds
 - `logo-black.png` — black AS5 logo for light backgrounds
 - `logo-mark.png` — AS5 standalone mark
-- `favicon.png` — browser favicon
+- `brand/as5-mark-white.png` — roof mark cut from the logo; source for the favicon/touch icons
 - `pattern-tile.png` — repeating AS5 background pattern (now 50% lighter than previous build)
 
 ## Homepage

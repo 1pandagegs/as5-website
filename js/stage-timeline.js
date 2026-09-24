@@ -15,6 +15,7 @@
     function activate(item) {
       items.forEach(function (i) {
         i.classList.toggle("is-active", i === item);
+        i.setAttribute("aria-pressed", String(i === item));
       });
       detailText.textContent = item.getAttribute("data-description") || "";
     }
