@@ -1,8 +1,25 @@
 # AS5 — Static HTML/CSS/JS Site
 
-A premium corporate site for AS5, a structural engineering and real estate
-development firm. Plain HTML/CSS/JS — no build step, no framework, no
-bundler. Every page is a static file.
+The site for AS5 Group (as5group.com), a real estate development and
+construction company in Abuja. Plain HTML/CSS/JS, no framework, no
+bundler. Every page is a static file, and the generated output is committed,
+so hosting needs no build step.
+
+## Maintenance scripts
+
+```
+npm install
+npm run images     # after adding/replacing anything in images/
+npm run prerender  # after editing js/data/projects.js or js/data/articles.js
+```
+
+- `scripts/images.js` writes a compressed `.webp` next to every `.jpeg` in
+  `images/` (pages reference the `.webp`), plus the favicon set
+  (`/favicon.ico`, `/apple-touch-icon.png`, `images/icons/`) and the Open
+  Graph share images in `images/og/`.
+- `scripts/prerender.js` bakes the portfolio/insight cards into the HTML
+  (between `<!-- prerender -->` markers) so they render without JavaScript,
+  and regenerates `sitemap.xml` from every page that isn't `noindex`.
 
 ## Structure
 
@@ -21,8 +38,9 @@ bundler. Every page is a static file.
 - `js/main.js` — shared behavior: navbar scroll/mobile-menu state, hero
   parallax, and scroll-triggered reveal animations (`IntersectionObserver`,
   respects `prefers-reduced-motion`).
-- `js/portfolio-filter.js` — client-side status/type filtering on the
-  Portfolio page, URL-synced via `?status=` / `?type=` query params.
+- `js/portfolio-filter.js` — progressive-enhancement category filter on the
+  Portfolio page (the cards are already in the HTML; the filter buttons only
+  appear once the script runs), URL-synced via `?category=` / `?status=`.
 - `js/contact-form.js` — client-side validation for the inquiry form, posts
   to `/api/inquire`, and pre-fills the project dropdown from a `?project=`
   query param.
@@ -30,20 +48,21 @@ bundler. Every page is a static file.
   `POST /api/inquire` logic (Zod validation + Resend). Vercel auto-detects
   anything under `api/` with zero config, so this is what actually serves
   the contact form in production on Vercel.
-- `server/` — a minimal standalone Express server with the *same*
-  `/api/inquire` logic, plus `express.static` to serve every file above.
+- `server/` — a minimal standalone Express server that mounts the same
+  `api/inquire.js` handler, plus `express.static` to serve every file above.
   This is for running the whole site locally or on any non-Vercel host
   (a VPS, Netlify with a rewrite, etc.) where there's no serverless
   functions convention to hook into.
 
-Both `api/inquire.js` and `server/server.js` implement the same
-validation/send logic independently — there's no shared module between them
-because they run under different conventions (Vercel's `(req, res)` handler
-vs. an Express route). Keep them in sync if the validation rules change.
+The form posts JSON via `fetch`; without JavaScript it falls back to a normal
+form POST, which gets a redirect to `/contact/thank-you/`. With no
+`RESEND_API_KEY` in production the endpoint returns 503 (and the form shows
+the email/phone fallback) instead of pretending the inquiry was sent.
 
 ## Running locally
 
 ```
+npm install            # repo root: resend/zod for api/inquire.js
 cd server
 npm install
 cp .env.example .env   # fill in RESEND_API_KEY / INQUIRY_RECIPIENT_EMAIL when ready
@@ -58,9 +77,10 @@ it just won't send a real email until a key is added.
 
 **Vercel**: push to the connected branch. The static files deploy as-is and
 `api/inquire.js` deploys automatically as a serverless function — no config
-needed. Set `RESEND_API_KEY` and `INQUIRY_RECIPIENT_EMAIL` in the Vercel
-project's Environment Variables so the function can actually send email
-(without them it validates and logs instead, same as local dev).
+needed. Set `RESEND_API_KEY` in the Vercel project's Environment Variables
+and verify the `as5group.com` domain in Resend (the default sender is
+`website@as5group.com`; override with `INQUIRY_FROM_EMAIL`). Inquiries go to
+`INQUIRY_RECIPIENT_EMAIL`, defaulting to `info@as5group.com`.
 
 **Anywhere else**: every file outside `api/` and `server/` is plain static
 HTML/CSS/JS and can be hosted anywhere (Netlify, S3, GitHub Pages, etc.)
@@ -71,10 +91,5 @@ at `/api/inquire`, or point the form at a different backend and update the
 
 ## Known gaps
 
-- No image optimization/resizing/lazy-loading — images are loaded directly
-  from Unsplash at fixed widths (clearly marked `TODO: replace with client
-  photography`).
-- No build-time HTML generation — every page's navbar/footer markup is
-  duplicated by hand across files rather than shared via a template.
-- All content is placeholder/TODO copy — replace with client-approved
-  content before launch.
+- Navbar/footer markup is still duplicated by hand across pages.
+- See `FINALIZATION-CHECKLIST.md` for content still owed by the client.

@@ -4,8 +4,12 @@
   var grid = document.querySelector("[data-portfolio-grid]");
   if (!grid) return;
 
-  var items = Array.prototype.slice.call(grid.children);
+  // Cards are prerendered into the HTML (scripts/prerender.js); the filter
+  // controls stay hidden until this script can make them work.
+  var items = Array.prototype.slice.call(grid.querySelectorAll(".project-card"));
   var chips = document.querySelectorAll(".filter-chip");
+  var controls = document.querySelector("[data-filter-controls]");
+  if (controls) controls.hidden = false;
   var emptyState = document.querySelector("[data-portfolio-empty]");
   var reduceMotion = window.matchMedia(
     "(prefers-reduced-motion: reduce)"
@@ -48,13 +52,15 @@
     });
 
     if (emptyState) {
-      emptyState.style.display = visibleCount === 0 ? "" : "none";
+      emptyState.hidden = visibleCount !== 0;
     }
 
     Array.prototype.forEach.call(chips, function (chip) {
       var group = chip.getAttribute("data-filter-group");
       var value = chip.getAttribute("data-filter-value");
-      chip.classList.toggle("is-active", filters[group] === value);
+      var active = filters[group] === value;
+      chip.classList.toggle("is-active", active);
+      chip.setAttribute("aria-pressed", String(active));
     });
   }
 

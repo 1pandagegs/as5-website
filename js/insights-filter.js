@@ -12,6 +12,8 @@
   var grid = document.querySelector("[data-articles-grid]");
   if (!grid) return;
 
+  var controls = document.querySelector("[data-insights-filter]");
+  if (controls) controls.hidden = false;
   var chips = document.querySelectorAll("[data-insights-filter] .filter-chip");
   var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   var fadeDuration = reduceMotion ? 0 : 300;
@@ -31,13 +33,15 @@
   }
 
   function applyFilter(category) {
-    var items = Array.prototype.slice.call(grid.children);
+    var items = Array.prototype.slice.call(grid.querySelectorAll(".insight-card"));
     items.forEach(function (item) {
       var visible = !category || item.getAttribute("data-category") === category;
       setItemVisible(item, visible);
     });
     Array.prototype.forEach.call(chips, function (chip) {
-      chip.classList.toggle("is-active", chip.getAttribute("data-filter-value") === category);
+      var active = chip.getAttribute("data-filter-value") === category;
+      chip.classList.toggle("is-active", active);
+      chip.setAttribute("aria-pressed", String(active));
     });
   }
 

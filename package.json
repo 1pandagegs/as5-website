@@ -6,5 +6,12 @@
   "dependencies": {
     "resend": "^6.17.2",
     "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "sharp": "^0.34.5"
+  },
+  "scripts": {
+    "images": "node scripts/images.js",
+    "prerender": "node scripts/prerender.js"
   }
 }

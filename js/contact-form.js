@@ -66,6 +66,7 @@
         project: String(formData.get("project") || "") || undefined,
         timeline: String(formData.get("timeline") || "") || undefined,
         message: String(formData.get("message") || ""),
+        website: String(formData.get("website") || "") || undefined,
       };
 
       var errors = validate(values);
@@ -79,20 +80,25 @@
       submitButton.disabled = true;
       submitButton.textContent = "Sending…";
 
-      fetch("/api/inquire", {
+      fetch(form.getAttribute("action") || "/api/inquire", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
+        headers: { "Content-Type": "application/json", Accept: "application/json" },
         body: JSON.stringify(values),
       })
         .then(function (response) {
           if (!response.ok) throw new Error("Request failed");
           form.hidden = true;
-          if (successEl) successEl.hidden = false;
+          if (successEl) {
+            successEl.hidden = false;
+            successEl.focus();
+          }
         })
         .catch(function () {
           if (serverMessageEl) {
-            serverMessageEl.textContent =
-              "Something went wrong. Please try again or email us directly.";
+            serverMessageEl.innerHTML =
+              'Sorry, your message could not be sent. Please email us at ' +
+              '<a href="mailto:info@as5group.com">info@as5group.com</a> or call ' +
+              '<a href="tel:+2347042377442">+234 704 237 7442</a>.';
             serverMessageEl.hidden = false;
           }
         })

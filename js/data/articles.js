@@ -13,8 +13,7 @@ window.AS5_ARTICLES = [
     date: "2026-03-01",
     excerpt:
       "Value isn't set at handover — it's set at the planning table. The decisions made before ground is broken are the ones that hold up decades later.",
-    heroImage: "/images/insight-why-planning-determines-long-term-value.jpeg",
-    fallbackImage: "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1200&auto=format&fit=crop",
+    heroImage: "/images/home-hero.webp",
     featured: true,
   },
   {
@@ -24,8 +23,7 @@ window.AS5_ARTICLES = [
     date: "2026-02-10",
     excerpt:
       "Construction builds what's on the drawing. Development decides what belongs on the drawing in the first place — and why.",
-    heroImage: "/images/insight-difference-construction-development.jpeg",
-    fallbackImage: "https://images.unsplash.com/photo-1531834685032-c34bf0d84c77?q=80&w=1200&auto=format&fit=crop",
+    heroImage: "/images/project-three-of-us-09-site-context.webp",
     featured: false,
   },
   {
@@ -35,8 +33,7 @@ window.AS5_ARTICLES = [
     date: "2026-01-22",
     excerpt:
       "The right partner doesn't just add capacity — they add a second set of standards a project has to meet.",
-    heroImage: "/images/insight-strong-partnerships-project-delivery.jpeg",
-    fallbackImage: "https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=1200&auto=format&fit=crop",
+    heroImage: "/images/project-keystone-polo-partnership-02-brand-presence.webp",
     featured: false,
   },
   {
@@ -47,8 +44,7 @@ window.AS5_ARTICLES = [
     date: "2025-12-05",
     excerpt:
       "A missed milestone is rarely the real problem — it's the first visible sign of one that started weeks earlier.",
-    heroImage: "/images/insight-milestone-governance.jpeg",
-    fallbackImage: "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?q=80&w=1200&auto=format&fit=crop",
+    heroImage: "/images/services-project-management.webp",
     featured: false,
   },
   {
@@ -59,8 +55,7 @@ window.AS5_ARTICLES = [
     date: "2025-11-14",
     excerpt:
       "Every site has a logic already built into it — access, orientation, soil, neighbors. The best designs respond to it instead of overriding it.",
-    heroImage: "/images/insight-reading-site.jpeg",
-    fallbackImage: "https://images.unsplash.com/photo-1449158743715-0a90ebb6d2d8?q=80&w=1200&auto=format&fit=crop",
+    heroImage: "/images/services-development.webp",
     featured: false,
   },
   {
@@ -71,8 +66,7 @@ window.AS5_ARTICLES = [
     date: "2025-10-02",
     excerpt:
       "Speed sells. Sequence delivers. The projects that last are rarely the ones that moved fastest through their first year.",
-    heroImage: "/images/insight-building-slower.jpeg",
-    fallbackImage: "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=1200&auto=format&fit=crop",
+    heroImage: "/images/services-construction.webp",
     featured: false,
   },
 ];
