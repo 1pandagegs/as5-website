@@ -1,6 +1,6 @@
 /**
  * Real AS5 portfolio entries currently supported by client-provided material.
- * Rendered into the HTML at build time by scripts/prerender.js — run
+ * Rendered into the HTML at build time by scripts/prerender.js, run
  * `npm run prerender` after editing this file.
  */
 window.AS5_PROJECTS = [
@@ -39,7 +39,7 @@ window.AS5_PROJECTS = [
   },
   {
     slug: "fmwrs-dams-department-2025",
-    title: "FMWR&S — Dams Department",
+    title: "FMWR&S Dams Department",
     tagline: "Electrical repairs and replacement of office equipment at the Old Federal Secretariat, Area 1, Garki.",
     heroImage: "/images/project-institutional-placeholder.webp",
     category: "contracts",

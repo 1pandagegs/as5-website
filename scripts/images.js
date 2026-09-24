@@ -26,6 +26,8 @@ const INK = "#0a0a0b";
 // most ~700 CSS px wide, so 1400px covers 2x screens.
 const MAX_WIDTH = { "home-hero": 2400 };
 const DEFAULT_MAX_WIDTH = 1400;
+// Sources that are enlarged past their native size (see photosToWebp).
+const UPSCALE = { "home-hero": 1600 };
 
 async function photosToWebp() {
   const files = fs.readdirSync(img()).filter((f) => /\.(jpe?g)$/i.test(f));
@@ -33,11 +35,19 @@ async function photosToWebp() {
     const base = file.replace(/\.(jpe?g)$/i, "");
     const out = img(base + ".webp");
     const maxWidth = MAX_WIDTH[base] || DEFAULT_MAX_WIDTH;
-    await sharp(img(file))
-      .rotate()
-      .resize({ width: maxWidth, withoutEnlargement: true })
-      .webp({ quality: 74, effort: 5 })
-      .toFile(out);
+    let pipeline = sharp(img(file)).rotate();
+    if (UPSCALE[base]) {
+      // The source is smaller than the area it fills, so the browser would
+      // enlarge it anyway; doing it here with Lanczos + light sharpening looks
+      // cleaner. It's interpolation, not new detail: replace the source when
+      // a higher-resolution photo is available.
+      pipeline = pipeline
+        .resize({ width: UPSCALE[base], kernel: "lanczos3" })
+        .sharpen({ sigma: 1.1, m1: 0.6, m2: 0.4 });
+    } else {
+      pipeline = pipeline.resize({ width: maxWidth, withoutEnlargement: true });
+    }
+    await pipeline.webp({ quality: UPSCALE[base] ? 76 : 74, effort: 5 }).toFile(out);
     report(file, out);
   }
 }
