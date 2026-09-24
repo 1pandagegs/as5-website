@@ -11,7 +11,9 @@
 - Footer: full address line, icon links (LinkedIn, Instagram, WhatsApp), tracking parameters removed from the Instagram URL.
 - All Unsplash hotlinks removed; images self-hosted as WebP; below-fold images lazy-loaded.
 - Accessibility: skip link, visible focus, footer contrast, heading order, valid `<dl>`s, Escape closes the mobile menu, content visible without JS, contact page no longer overflows on phones.
-- Contact form: honeypot, no-JS fallback, and a 503 error (not a false "sent") when email isn't configured in production.
+- Contact form: honeypot, no-JS fallback, and a 503 error (not a false "sent") when email isn't configured in production. Resend is configured and delivery verified live.
+- Em dashes removed from all site copy; page titles use "Page | AS5 Group".
+- Homepage hero upscaled 2x (Lanczos + sharpening) from the 793px source. This is interpolation, not real detail: a native high-resolution landscape photo is still needed.
 
 ## Needed from the client before launch
 1. **Resend credentials**: `RESEND_API_KEY` in Vercel, and `as5group.com` verified as a sending domain in Resend (DNS records). Until then the form shows an "email/call us" error in production.
